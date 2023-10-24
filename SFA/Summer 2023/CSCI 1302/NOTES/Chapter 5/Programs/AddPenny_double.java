@@ -1,0 +1,21 @@
+//
+import java.io.*;
+import java.util.*;
+public class AddPenny_double {
+	public static void main (String[] args){
+
+		double penny = .01;
+		System.out.println("penny value: " + penny);
+
+		double dollar = 0.0;
+		System.out.println("Dollar at the start: " + dollar);
+
+		for(int x = 0; x < 100;  x++){
+			dollar += penny;
+			System.out.println(dollar);
+		}
+
+		System.out.println("In the end the dollar is " + dollar);
+
+	}// end main
+}// end AddPenny_double

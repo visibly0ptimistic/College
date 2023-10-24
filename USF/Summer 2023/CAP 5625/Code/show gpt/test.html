@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>K-Nearest Neighbors Visualization</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <style>
+    svg {
+      width: 400px;
+      height: 400px;
+    }
+    .sample {
+      fill: #999;
+      stroke: #000;
+    }
+    .new-sample {
+      fill: red;
+      stroke: #000;
+    }
+    .isoline {
+      stroke-dasharray: 5;
+      stroke-width: 1;
+      stroke: #999;
+    }
+    .prediction {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <svg id="visualization"></svg>
+
+  <script>
+    // Sample data
+    const trainingSet = [
+      { x: 50, y: 50, label: "O" },
+      { x: 100, y: 100, label: "O" },
+      { x: 150, y: 150, label: "O" },
+      { x: 200, y: 200, label: "X" },
+      { x: 250, y: 250, label: "X" },
+      { x: 300, y: 300, label: "X" },
+    ];
+
+    const newSample = { x: 200, y: 200 };
+
+    // Parameters for KNN
+    const kValues = [1, 3, 5]; // Different values of K to test
+
+    // Function to calculate Euclidean distance between two points
+    function calculateDistance(point1, point2) {
+      const dx = point2.x - point1.x;
+      const dy = point2.y - point1.y;
+      return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    // Function to find k nearest neighbors
+    function findNearestNeighbors(newSample, trainingSet, k) {
+      return trainingSet
+        .map((sample) => ({
+          ...sample,
+          distance: calculateDistance(newSample, sample),
+        }))
+        .sort((a, b) => a.distance - b.distance)
+        .slice(0, k);
+    }
+
+    // Function to assign a label based on majority voting
+    function assignLabel(neighbors) {
+      const labels = {};
+      neighbors.forEach((neighbor) => {
+        if (labels[neighbor.label]) {
+          labels[neighbor.label]++;
+        } else {
+          labels[neighbor.label] = 1;
+        }
+      });
+      return Object.keys(labels).reduce(
+        (a, b) => (labels[a] > labels[b] ? a : b)
+      );
+    }
+
+    // Initialize D3.js
+    const svg = d3.select("#visualization");
+    const width = +svg.attr("width");
+    const height = +svg.attr("height");
+
+    // Create isolines
+    const isolines = d3.range(0, 250, 50).map((distance) => {
+      return d3.range(0, 360, 10).map((angle) => {
+        const x = newSample.x + distance * Math.cos((angle * Math.PI) / 180);
+        const y = newSample.y + distance * Math.sin((angle * Math.PI) / 180);
+        return { x, y };
+      });
+    });
+
+    // Draw isolines
+    svg
+      .selectAll(".isoline")
+      .data(isolines)
+      .enter()
+      .append("path")
+      .attr("class", "isoline")
+      .attr("d", (d) => d3.line().x((p) => p.x).y((p) => p.y)(d));
+
+    // Draw training set samples
+    svg
+      .selectAll(".sample")
+      .data(trainingSet)
+      .enter()
+      .append("circle")
+      .attr("class", "sample")
+      .attr("cx", (d) => d.x)
+      .attr("cy", (d) => d.y)
+      .attr("r", 5);
+
+    // Draw new sample
+    svg
+      .append("circle")
+      .attr("class", "new-sample")
+      .attr("cx", newSample.x)
+      .attr("cy", newSample.y)
+      .attr("r", 5);
+
+    // Process each K value
+    kValues.forEach((k) => {
+      // Find nearest neighbors for the new sample
+      const neighbors = findNearestNeighbors(newSample, trainingSet, k);
+
+      // Assign label based on majority voting
+      const predictedLabel = assignLabel(neighbors);
+
+      // Draw prediction label
+      svg
+        .append("text")
+        .attr("class", "prediction")
+        .attr("x", 20)
+        .attr("y", 40 + k * 30)
+        .text(`Prediction (K = ${k}): ${predictedLabel}`);
+    });
+
+  </script>
+</body>
+</html>
