@@ -1,0 +1,5100 @@
+Statistical Analysis I
+Discrete Random Variables
+Terminology
+A RANDOM VARIABLE is a function that assigns a numerical value to each outcome of a sample space.
+Examples: Political Affiliation (1 = Democrat, 2 = Republican, 3 = Other) for
+All U.S. citizens of voting age
+Product Status (1 = Shippable, ie, meets all specs, 0 = Not Shippable, ie, does not meet >= 1 spec) for
+All product produced from a specific manufacturing line
+Complaint Response Time for
+All complaints made about airline travel
+Number of “matches” (0, 1, 2, or 4) for
+All possible ways 4 babies could be randomly assigned to 4 mothers
+NOTE: The second example above is a special kind of Random Variable called a Bernoulli Trial.
+A Bernoulli Trial is a Random Variable with only 2 outcomes – in the example, either
+Product is Shippable or it is not – other examples include the following:
+Examples: The face-up after tossing a coin (1 = Heads, 2 = Tails)
+The answer to a True/False question on an exam (1 = True, 2 = False)
+The color of an M&M is Brown (1 = Brown, 2 = Not Brown)
+The gender of a medical patient (1 = Female, 2 = Male)
+NOTE: Three of the four initial examples above have a countable number of outcomes, but
+Complaint Response Time does not – this time could be any value > 0.
+A DISCRETE RANDOM VARIABLE is one involving a countable set of outcomes
+A CONTINUOUS RANDOM VARIABLE is one involving an uncountable set of outcomes
+DISCRETE
+DISCRETE
+CONTINUOUS
+DISCRETE
+ALL
+DISCRETE
+Discrete Random Variables
+Probability Mass Functions
+A Discrete PROBABILITY MASS FUNCTION (pmf) is a function f(x) such that
+fX(x) = P[X = x],
+where x is a specific value (outcome) for Discrete Random Variable X.
+Simply a function defining the probability of the specific outcome x.
+Example: For tossing a coin, the Random Variable X = 0 if Tails & 1 if Heads
+has pmf given by X(0) = ½ and X(1) = ½, or in chart form as:
+Example: For the exact matching of a random arrangement of the numbers 1, 2, 3,
+& 4, the Random Variable X = # Matches has pmf given by X(0) = 9/24, X(1) = 8/24,
+X(2) = 6/24, and X(4) = 1/24, or in chart form as:
+x 0 1 2 4
+fX(x) 9/24 8/24 6/24 1/24
+x 0 1
+fX(x) ½ ½
+Discrete Random Variables
+Point Graphs and Histograms
+Example: Tossing a Coin
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0 1
+Probability
+x
+Probability Point Graph
+T ossing a Coin, X = 0 if Tails, X = 1 if Heads
+f(x)
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0 1
+Probability
+x
+Probability Histogram
+T ossing a Coin, X = 0 if Tails, X = 1 if Heads
+f(x)
+Example: “Random 1,2,3,4” Matches
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+0.4
+0 1 2 3 4
+Probability
+x
+Probability Point Graph
+"Random Babies" Matches
+f(x)
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+0.4
+0 1 2 3 4
+Probability
+x
+Probability Histogram
+"Random Babies" Matches
+f(x)
+Discrete Random Variables
+Probability Mass Function Axioms and Summary
+For any Discrete Probability Mass Function (pmf) given by fX(x):
+1) 0 <= fX(x) <=1 for each value of x
+2) SumAll values of x { fX(x) } = 1
+Example: Tossing a Coin
+x 0 1
+fX(x) ½ ½ Sum = 1
+Example: “Random 1,2,3,4” Matches
+x 0 1 2 4
+fX(x) 9/24 8/24 6/24 1/24 Sum = 1
+In summary, a discrete probability mass function consists of two elements:
+1) some type of listing of all the possible values of the random variable, and
+2) the corresponding probabilities for each value.
+Discrete Random Variables
+Expected Value = Mean
+The EXPECTED VALUE (or Mean) of a Discrete Random Variable X is given by:
+µ = E[X] = SumAll values of x{ x*fX(x) }
+Example: “Random 1,2,3,4” Matches
+x 0 1 2 4
+fX(x) 9/24 8/24 6/24 1/24
+x*fX(x) 0 8/24 12/24 4/24
+µ = Sum of Bottom Row
+= (8 + 12 + 4)/24
+= 24/24
+= 1
+Example: Sum when Rolling 2 Die
+µ = Sum of Last Column
+= 252/36
+= 7
+Expected Value = Mean is simply
+Sum of each of:
+1) Outcome x (ie, “times”)
+2) That Outcome’s
+Probability of Occurring
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+0.4
+0 1 2 3 4
+Probability
+x
+Probability Histogram
+"Random 1,2,3,4" Matches
+f(x)
+Discrete Random Variables
+Expected Value = Center of Mass of Distribution
+Example: “Random 1,2,3,4” Matches
+The EXPECTED VALUE is the point
+at which the PMF would be expected
+to “balance” as if on a fulcrum.
+Example: Sum when Rolling 2 Die
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+0.12
+0.14
+0.16
+0.18
+2 3 4 5 6 7 8 9 10 11 12
+P[A]
+Outcome
+Probability Histogram
+The MEAN as the “balancing” point is
+more obvious for this example, but is
+the Mean sufficient to describe a
+probability distribution?
+Discrete Random Variables
+Measure of Spread = Variance
+Example: “Random 1,2,3,4” Matches
+x 0 1 2 4
+fX(x) 9/24 8/24 6/24 1/24
+x*fX(x) 0 8/24 12/24 4/24
+Expected Value = E[X] = µ = 1
+(x-µ) -1 0 1 3
+(x-µ)2 1 0 1 9
+(x-µ)2fX(x) 9/24 0 6/24 9/24
+Variance = Var(X) = 9/24 + 6/24 + 9/24 = 1
+Standard Deviation = Sqrt[Var(X)] = 1
+x 0 1 2 4
+fX(x) 9/24 8/24 6/24 1/24
+x2 0 1 4 16
+x2*fX(x) 0 8/24 24/24 16/24
+Variance = 8/24 + 24/24 + 16/24 – (1)2
+Var(X) = 48/24 – 1 = 2 – 1 = 1 (same as above)
+Alternative formula for Variance:
+σ2 = Var(X)
+= SumAll values of x{ x2*fX(x) } - µ2
+The VARIANCE of a Discrete Random
+Variable X is given by:
+σ2 = Var(X) = E[(x-µ)2]
+= SumAll values of x{ (x-µ)2*fX(x) }
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+0.4
+0 1 2 3 4
+Probability
+x
+Probability Histogram
+"Random 1,2,3,4" Matches
+f(x)
+Discrete Random Variables
+Measure of Spread = Variance
+Example: Sum when Rolling 2 Die
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+0.12
+0.14
+0.16
+0.18
+2 3 4 5 6 7 8 9 10 11 12
+P[A]
+Outcome
+Probability Histogram
+Expected Value = µ = 252/36 = 7
+Variance = σ2 = 1974/36 – (7)2 = 54.8333 – 49 = 5.8333
+Standard Deviation = σ = Sqrt(5.8333) = 2.4152
+Using Standard Deviation
+Chebyshev’s Theorem
+For any random variable, X, with mean µ and standard deviation σ, then
+the probability that X lies within k standard deviations of the mean is
+at least (1 – 1/k2), where k > 0, that is
+P[ µ - kσ <= X <= µ + kσ] >= 1 – 1/k2, k>0.
+For k = 1, Chebyshev indicates:
+P[ µ - 1σ <= X <= µ + 1σ] >= 1 – 1/12 = 0
+So … no real information here, but for k>1:
+1-k-2
+Using Standard Deviation
+Chebyshev’s Theorem
+Example: “Random 1,2,3,4” Matches
+x 0 1 2 4
+fX(x) 9/24 8/24 6/24 1/24
+Mean = µ = 1
+Standard Deviation = σ = 1
+P[ µ - 1σ <= X <= µ + 1σ] =
+P[ 1 -1 <= X <= 1 + 1] =
+P[ 0 <= X <= 2] =
+9/24 + 8/24 + 6/24 =
+23/24 = 0.9583 >= 0
+P[ µ - 2σ <= X <= µ + 2σ] =
+P[ 1 -2 <= X <= 1 + 2] =
+P[ -1 <= X <= 3] =
+9/24 + 8/24 + 6/24 =
+23/24 = 0.9583 >= 0.75
+P[ µ - 3σ <= X <= µ + 3σ] =
+P[ 1 -3 <= X <= 1 + 3] =
+P[ -2 <= X <= 4] =
+9/24 + 8/24 + 6/24 + 1/24 =
+24/24 = 1 >= 0.889
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+0.4
+0 1 2 3 4
+Probability
+x
+Probability Histogram
+"Random 1,2,3,4" Matches
+f(x)
+Using Standard Deviation
+Empirical Rule
+For a “mounded” distribution,
+P[µ - 1σ <= X <= µ + 1σ] ≈ 68%
+P[µ - 2σ <= X <= µ + 2σ] ≈ 95%
+P[µ - 3σ <= X <= µ + 3σ] ≈ 100%
+Mounded Distribution
+-6 -5 -4 -3 -2 -1 0 1 2 3 4
+Standard Deviations
+Normal Distribution
+Since “mounded” distributions are
+Symmetric about their Mean:
+P[µ <= X <= µ + σ] = P[µ - σ <= X <= µ] ≈ 34%
+P[µ <= X <= µ + 2σ] = P[µ - 2σ <= X <= µ] ≈ 47.5%
+P[µ <= X <= µ + 3σ] = P[µ - 3σ <= X <= µ] ≈ 50%
+34% 34%
+13.5% 13.5%
+2.5%
+2.5%
+Using Standard Deviation
+Empirical Rule
+Example: Sum when Rolling 2 Die
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+0.12
+0.14
+0.16
+0.18
+2 3 4 5 6 7 8 9 10 11 12
+P[A]
+Outcome
+Probability Histogram
+µ = 7
+σ = 2.145
+P[ µ - 1σ <= X <= µ + 1σ] =
+P[ 7 -2.145 <= X <= 7 + 2.145] =
+P[ 4.855 <= X <= 9.145] =
+4/36 + 5/36 + 6/36 + 5/36 + 4/36=
+24/36 = 0.6667 ≈ 0.68
+P[ µ - 2σ <= X <= µ + 2σ] =
+P[ 7 – 4.29 <= X <= 7 + 4.29] =
+P[ 2.71 <= X <= 11.29] =
+2/36 + 3/36 + 24/36 + 3/36 + 2/36=
+34/36 = 0.9444 ≈ 0.95
+P[ µ - 3σ <= X <= µ + 3σ] =
+P[ 7 – 6.435 <= X <= 7 + 6.435] =
+P[ 0.565 <= X <= 13.435] =
+1/36 + 34/36 + 1/36=
+36/36 = 1 = 1
+Binomial Probability Distribution
+Let a random variable Y be the number of “successes” in n independent
+Bernoulli trials each with P[“success”] = p, then Y has a Binomial Probability
+Distribution, and the pmf can be expressed as
+fY(y) = P[Y=y] = ,
+where is the combination of n things taken y at a time = .
+(𝑛
+𝑦)𝑝𝑦(1− 𝑝)𝑛−𝑦
+(𝑛
+𝑦)𝑛!
+𝑦!(𝑛− 𝑦)!
+Example: Consider a baseball player who has a lifetime on-base percentage of 0.300.
+This means he is “successful” in reaching at least 1st base in 30% of his “plate appearances” (ie,
+“PA’s = “trials”).
+In each “plate appearance” he is either “successful” in getting “on-base”, or not, these are Bernoulli
+trials (recall – a Bernoulli random variable is one with only 2 outcomes – “on-base” or “not on-base”
+= “out” in this case).
+So in 10 “plate appearances” (ie, “trials”) what is the probability this player reaches at least 1st base
+(ie, a “success”) exactly 3 times?
+P[ Exactly 3 “successes” in 10 “PA”s ] = P[ 3 “successes (s)” and 7 “outs (f)” in 10 “PA”s]
+P[“on-base” = “success” on a single “PA”] = 0.3
+P[“out” = “failure” on a single “PA”] = 1 – 0.3 = 0.7
+Occurs 3 times, so P[S = 3 in 3] = (0.3)3
+Occurs 7 times, so P[F= 7 in 7] = (0.7)7
+Number of ways to arrange 3 Ss & 7 Fs is 10!/(3!*7!) = , so …
+(10
+3 )
+P[Exactly 3 “successes” in 10 “PA”s] = P[3 in 10] = * (0.3)3 * (0.7)7
+≈ 0.2668
+(10
+3 ) 
+Binomial Probability Distribution
+Example: The chips operating communications satellites can fail with sufficient exposure to
+radiation present in space (eg, due to solar flares, etc). Consequently, these satellites are
+designed to carry multiple redundant chip sets (chips will only fail if in operation when
+radiation threshold exceeded).
+If the probability of a chip set failure over the lifetime of a satellite is 20%, and the designers
+have included 5 redundant chip sets in the satellite, what is the probability it will operate for its
+full lifetime?
+P[≥1 Remain Functional] = P[1 Functional] + … + P[5 Functional]
+= (.8)1(.2)4 + (.8)2(.2)3 + … + (.8)5(.2)0
+= 5*.8*.24 + 10*.82*.23 + 10*.83.22 + 5*.84*.2 + .85
+= 0.99968
+What if due to desire to cut costs, management edicts a design with only 4 chip sets, then
+what does the probability above become?
+P[≥1 Remain Functional] = 1 – P[All Fail]
+= 1 - .24
+= 0.99840
+(5
+1) (5
+2) (5
+5)
+Binomial Probability Distribution
+Let the random variable X have pmf fX(x), then for any value x, the Cumulative
+Distribution Function (cdf) is the total probability of all the potential outcomes for X
+that are less than x. The cdf for a discrete random variable, can be expressed as:
+P[X ≤ x] = ∑𝐴𝑙𝑙 𝑥𝑖≤𝑥
+P[X = xi]
+Example: What is the probability the baseball player (noted previously) gets “on-base” at most
+3 times in 10 “plate appearances”?
+P[ ≤ 3 “successes” in 10 “trials”] = P[ S ≤ 3 in 10]
+= P[S=0 in 10] + P[S=1 in 10] + P[S=2 in 10] + P[S=3 in 10]
+= *.30*.710 + *.31*.79 + *.32*.78 +
+*.33*.77
+= .710 + 10*.3*.79 + 45*.32*.78 + 120*.33*.77
+≈ 0.0282 + 0.1211 + 0.2335 + 0.2668
+≈ 0.650
+(10
+0 ) (10
+1 )  (10
+2 )  (10
+3 )
+Note: There is an Excel function that calculates Binomial probabilities:
+=BINOMDIST(x, n, p, False/True),
+where x = number of successes of interest,
+n = number of trials considered,
+p = probability of success involved, with
+False = P[Exactly x successes in n trials] (pmf) and
+True = P[At Most x successes in n trials] (cdf)
+Binomial Probability Distribution
+OR … we could just use an Excel utility to do this for us:
+Requires 3 Inputs:
+1) N = Number of “Trials” (ie, n)
+2) n(Success) = Number of “Successes” (ie, x)
+3) P[Success] = Probability of “Success” (ie, p)
+Note requires Input for the specific
+Probability of Interest:
+1) Exact (ie, P[3 in 10]),
+2) At Least (ie, P[>=4 in 10], or
+3) At Most (ie. P[<=3 in 10]
+Example: X ~ Bin(n=15, p = 0.6)
+a) P[X = 8] = ?
+b) P[X < 8] = ?
+c) P[X >= 8] = ?
+Binomial Probability Distribution
+Mean, Variance, & Standard Deviation
+If X ~ Bin(n, p), then
+E[X] = µX = n*p,
+Var(X) = σX
+2 = n*p*(1-p), &
+Std Dev(X) = σX = n∗p∗(1−p)
+Example: The number of times the ballplayer previously described would be expected to
+reach at least 1st base in ten “plate appearances” would be …
+10*0.3 = 3
+Example: The expected number of chip set failures on the newly designed satellite
+previously described would be …
+4*0.2 = 0.8 (actually less than the old design: 5*0.2 = 1)
+The variance of failures would be …
+4*0.2*0.8 = 0.64
+The standard deviation of failures would be …
+= 0.8
+0.64
+Hypergeometric Probability Distribution
+Let a random variable Y be the number of “successes” in n dependent
+Bernoulli trials, where there are N possible outcomes, s of which are
+“successes” and (N-s) are not, then Y has a Hypergeometric Probability
+Distribution, and the pmf can be expressed as
+fY(y) = P[Y=y] = ,
+where is the combination of a things taken b at a time = .
+(𝑠
+𝑦)(𝑁− 𝑠
+𝑛− 𝑦 )
+(𝑁
+𝑛 ), 0 ≤ 𝑦 ≤ 𝑚𝑖𝑛(𝑛, 𝑠)
+(𝑎
+𝑏)𝑎!
+𝑏!(𝑎− 𝑏)! , 0 ≤ 𝑏 ≤ 𝑎 Example: You are throwing a party and need to purchase 5 dozen eggs. There are 50 cartons each
+with a dozen eggs at the store, but unbeknownst to you, 5 of these have at least one broken egg.
+You are “successful” if you choose a carton with no broken eggs, but your P[“success”] changes
+after each choice you make (ie, put a carton in your cart).
+Each “choice” you are either “successful” in getting no broken eggs, or not, so these are Bernoulli
+trials (recall – a Bernoulli random variable is one with only 2 outcomes – “0 broken” or “>=1 broken”
+in this case), but they are NOT independent since the P[“0 broken”] changes with each choice/trial.
+So in choosing 5 cartons (ie, trials”) what is the probability you end up with exactly 2 cartons with
+some broken eggs?
+Number of ways to choose 2 damaged cartons from the 5 available
+Number of ways to choose 3 cartons from the 45 undamaged ones
+= 5!/(2!*3!)
+= 45!/(3!*42!)
+(5
+2)
+(45
+3 )
+Number of ways to choose any 5 cartons from the 50 available = = 50!/(5!*45!), so …
+(50
+5 )
+P[Exactly 3 “successes” in 5 “choices”] = P[3 in 5] = /
+≈ 0.067
+(45
+3 )(5
+2) (50
+5 )
+Hypergeometric Probability Distribution
+Example: At the end of a production line for video gaming equipment, lots of 100 units are
+sampled for testing prior to shipment. If no issues are discovered with the sampled units,
+then the entire lot is shipped on to distributors. However, if any sampled unit is found to have
+a performance issue, then the entire lot is tested before any units are shipped.
+If the current test sample size is 3 units from each lot, then what is the probability a lot with 5
+defective units will ship with the defectives remaining undetected and included?
+P[Lot Ships with 5 defective units] = P[All 3 Sampled Units OK]
+= (# ways to get 3 Good)*(# ways to get 0 Bad)/
+(# ways to sample 3)
+=
+≈ 0.8560
+What if due to customer complaints management edicts an increase in sampling to 10 units
+per lot, but due to a concern about costs, also moves the number of defectives required to
+fully test the lot to two or more problem units in the sample. Now what is the probability a lot
+with 5 defective units will ship with 5 or 4 defectives?
+P[Lot Ships with 5 or 4 defectives] = P[All 10 Pass] + P[Exactly 1 Fails]
+=
+0 5838 0 3394 0 9231
+(95
+3 )(5
+0)
+(100
+3 )
+(95
+10)(5
+0)
+(100
+10 )+ (95
+9 )(5
+1)
+(100
+10 )
+Hypergeometric Probability Distribution
+So is management … misguided?
+Well … lets look a little more closely …
+Lets consider the following table:
+So … slightly less
+expected defectives
+per lot
+And … slightly less
+expected units tested
+per lot
+But … slightly higher
+expected percentage
+of defectives shipped
+So … change is really just about a “wash” (ie, not really different than before),
+But … management looks like it is doing something ☺
+Hypergeometric Probability Distribution
+Mean, Variance, & Standard Deviation
+If X ~ Hypgeom(s,f, n), then
+E[X] = µX = n*[s/(s + f)] = n*(s/N), where N = s + f
+Var(X) = σX
+2 = n*(s/N)*(f/N)*[(N-n)/(N-1)], &
+Std Dev(X) = σX = n∗(s/N)∗(f/N)∗[(N−n)/(N−1)]
+Example: The expected number of damaged cartons chosen when choosing 5 from a
+group of 50 including 5 damaged cartons would be …
+5*(5/50) = 0.5 (Note: Expected number of undamaged = 5*(45/50) = 4.5)
+Example: The expected number of defective units chosen when choosing 3 from a lot of
+100 including 5 defectives would be …
+3*0.05 = 0.15 (Note: Expected number of working units = 3*0.95 = 2.85)
+The variance of number of defectives would be …
+3*0.05*0.95*(97/99) ≈ 0.1396
+The standard deviation of failures would be …
+≈ 0.3737
+0.1396
+Poisson Distribution
+One of the stories surrounding the development of the Poisson distribution is that it was developed by a
+Frenchman (Poisson) as part of a study of the frequency of horses killing soldiers in the process of re-
+shoeing them during the Napoleonic wars.
+Recall that ex = 1 + x + x2/2! + x3/3! + … = ∑k=0 to ∞ xk/k!,
+so p(x) = λxe-λ/x!, x = 0, 1, … defines a pmf for a random variable X, and
+such a pmf is called a Poisson pmf with parameter λ.
+Random variables that have Poisson pmfs not only include the number of soldiers kicked in the head by
+their horses. Such random variables tend to appear in other situations as well:
+• number of accidents occurring in a given space and time,
+• number of defectives produced for a given process over a given amount of time,
+• number of defects on a given product,
+• number of calls received at a given telephone number over a given period of time,
+• number of customers entering a place of business for a given period of time.
+There are generally three postulates that give rise to Poisson processes:
+1. The probability of an occurrence of interest actually occurring in a fixed time interval of length t
+is approximately proportional to the length of the interval (ie, ≈λt, where λt is the parameter of
+the respective Poisson pmf)
+2. The probability of 2 or more occurrences in this interval is essentially zero.
+3. Occurrences in non-overlapping intervals are mutually independent of each other.
+Poisson Distribution
+A property of a Poisson random variable X is that E[X] = Var(X), which is fairly restrictive.
+However, because of this property, the parameter of a Poisson pmf is often denoted as µ, the common
+symbol used for the mean of any random variable.
+As with the sum of independent Binomial random variables, it can be shown that the sum of independent
+Poisson random variables, Y = , Xk ~ Poisson(µk) is also Poisson( ).
+∑𝑛
+𝑘=1
+Xk ∑𝑛
+𝑘=1 μk
+Example: Assume that the number of passes thrown by Patrick Mahomes in a specific game has a Poisson
+pmf. Then the pmf can be expressed as:
+p(x) = e-µµx/x!, x = 0, 1, …
+As of 9/20/23, Mahomes had thrown 3,596 passes in 96 regular season games, an average of ~34 per
+game.
+So, setting µ = 34 (large for most Poisson applications), an estimate of the probability that Mahomes will
+throw 20 passes in his next game would be given as
+P[X = 20] = e-34*(34)20/20! ≈ 0.003
+Clearly, some of these values are large (eg, 20! ≈ 2.433 x 1018), so such probabilities are generally obtained
+via computer. As with the Binomial distribution, there is also an Excel function for the Poisson distribution:
+=POISSON(x, µ, T/F) where x is the number of occurrences of interest, µ is the applicable Poisson
+parameter, and T/F, as for the Binomial, is FALSE for the pmf values and TRUE for the cdf results.
+Poisson Distribution
+Example (continued): So the probability Mahomes throws 20 passes in his next game is approximately 3 in 1000.
+A more interesting probability might be
+P[Mahomes throws fewer than 20 passes in his next game] = P[X < 20] ≈ 0.00675
+This is still small, and the probability of real interest to a bettor and more important to his bookie would be the
+number of passes k where P[X < k] ≈ P[X > k] ≈ 0.5, as the value of k represents a reasonable value at which
+to set a standard over-under bet.
+It turns out for the assumptions made here, k = 34 results in P[X < 34] ≈ 0.477 & P[X > 34] ≈ 0.455.
+Does it make sense that k = 34 is near the median of this distribution?
+Would it be expected that the median of any Poisson(µ) random variable would be = µ?
+Why might it be expected in this case?
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0 1 2 3 4 5 6 7 8 9 10
+Poisson pmf (μ=2/3)
+Poisson Distribution
+Example (continued): So one might be interested in the probability Mahomes will throw at least one
+touchdown pass in his next game. If we assume the number of passes thrown in the game (X) has a
+Poisson(µ=34) pmf and then, of these, the number of touchdown passes thrown in the game (Y) has a
+b(n=X, p=0.065) pmf, then
+P[Y > 1] = 1 – P[Y = 0] = 1 –
+= 1 –
+= 1 – e-2.21 ≈ 0.89
+∑∞
+𝑥=0
+𝑒−34 34𝑥
+𝑥! (𝑥
+0)(0.065)0(0.935)𝑥
+𝑒−34(0.065) ∑∞
+𝑥=0
+𝑒−34(0.935) [34(0.935)]𝑥
+𝑥!
+Again, to set a reasonable value for an over-under bet on the number of touchdown passes Mahomes will
+throw in his next game, it would be desirable to know k where
+P[Y < k] ≈ P[Y > k] ≈ 0.5
+The marginal pmf for Y is Poisson(µ=34*0.065=2.21), and the pmf for Y is as seen below:
+So where does the bookie set the over-under value?
+If set at Y=2, then if Mahomes throws 2 TD passes,
+no one wins. The chances of this occurring appear
+to be ~ 1 in 4.
+However, the bookie’s exposure is approximately the
+same on either side of the bet, as P[Under Wins] =
+0.3521 and P[Over Wins] = 0.38.
+Mahomes threw 33 passes of which 3 were touchdown passes in his next game in win vs Bears (“Over” wins).
+0.0000
+0.0500
+0.1000
+0.1500
+0.2000
+0.2500
+0.3000
+0 1 2 3 4 5 6 7 8 9 10
+Poisson pmf (μ=2.21)
+y pmf cdf
+0 0.1097 0.1097
+1 0.2424 0.3521
+2 0.2679 0.6200
+3 0.1973 0.8174
+4 0.1090 0.9264
+5 0.0482 0.9746
+6 0.0178 0.9924
+7 0.0056 0.9980
+8 0.0015 0.9995
+9 0.00038 0.999895
+10 8.4E-05 0.999979
+Continuous Probability Density Function
+While Discrete Random Variables have a Probability Mass Function (pmf), the
+differences between countable and uncountable sets (recall – discrete random
+variables are defined on countable sets, continuous on uncountable sets) no
+longer allow the use of a pmf.
+Instead, for Continuous Random Variables, we utilize a Probability Density
+Function (pdf). Let X be a continuous random variable with pdf fX(x) , then
+1) fX(x) >= 0 for all applicable values x,
+2) P[ a <= X <= b] is the area under the graph of fX(x) for
+the interval [a, b], and
+3) the total area under the graph of fX(x) = 1.
+STAT 5340
+Statistical Analysis I
+Graphical & Numerical Summaries
+Of Data
+Plot/Graph Your Data!
+The Human Eye-Brain Combination is perhaps the best
+Pattern Recognition Processor in the known Universe
+Region
+Hours
+Worked
+U.S. 48
+Northeast 47
+Mid-Atlantic 49
+South 47
+Midwest 47
+Central Mt 51
+California 50
+Pacific NW 47
+Canada 43
+Europe 48
+Asia 47
+South America and Africa 49
+Consider the example of
+Hours Worked by Java
+Developers by Location
+The low value for Canada is not as
+Obvious in the Table as it is in the Plot
+Plots & Graphs are generally of more value as data sets get larger
+0
+1
+2
+3
+4
+5
+6
+42.5
+43.5
+44.5
+45.5
+46.5
+47.5
+48.5
+49.5
+50.5
+51.5
+52.5
+53.5
+Histogram
+Freq
+0%
+10%
+20%
+30%
+40%
+50%
+60%
+70%
+80%
+90%
+100%
+Percentage
+Use of Tax Refund
+Pay Bills
+Save
+Spend
+Education Account
+Retirement Account
+Charity
+Stacked Bar Chart
+Use of Tax Refund
+Charity
+Education Account
+Pay Bills
+Retirement Account
+Save
+Spend
+Pie/Circle Chart
+0%
+10%
+20%
+30%
+40%
+50%
+60%
+70%
+Charity Education
+Account
+Pay Bills Retirement
+Account
+Save Spend
+Use of Tax Refund Bar Chart
+0%
+20%
+40%
+60%
+80%
+100%
+Pay Bills Save Spend Education
+Account
+Retirement
+Account
+Charity
+Use of Tax Refund
+Percentage Cum %
+Pareto Diagram
+Graphs/Plots for Qualitative Data are generally more limited
+Recall Qualitative Data carries Less Information than Quantitative Data
+Graphs for Qualitative Data
+Graphs for Quantitative Data
+Smaller Data Sets (say N < 40)
+Dot Plots – Display All the Data
+Stem & Leaf Diagrams – Display All
+the Data Both Graphically and
+Numerically
+50
+48
+46
+44
+Hours
+Dot Plot for Hours Worked - JAVA Programmers
+Stem-and-Leaf Display: Hours
+Stem-and-leaf of Hours
+N = 12
+Leaf Unit = 0.10
+1 43 0
+1 44
+1 45
+1 46
+6 47 00000
+6 48 00
+4 49 00
+2 50 0
+1 51 0
+Graphs for Quantitative Data
+For Small Data Sets (say N<40)
+- Dot Plots – display all data values
+- Stem-and-Leaf Displays – display all data
+values graphically and numerically
+- Special Cases of Histograms
+For Larger Data Sets
+- Histograms
+- Cumulative Frequency Plots (Ogives)
+Constructing Histograms
+1) Find N, Max, Min, Range
+2) Choose
+1) Number of Classes (m)
+1) m~ Sqrt(N)
+2) Usually <=20
+2) Class Width (c)
+1) m*c > Range
+2) “Even” width if possible
+3) Start Point (< Min)
+Guidelines
+1) Classes all same width
+2) No Overlap
+3) Data Values Belong to Only 1 Class
+Normal Uniform J-Shaped
+Skewed Right Skewed Left Bi-Modal
+Histograms Suggest Population Distributions
+Histograms & Ogives
+An Ogive is more commonly
+Called a Cumulative Frequency or
+Cumulative Relative Frequency Plot
+Class Information
+Boundary Boundary
+Lo Mark Hi Freq Cum Freq Cum Rel Freq
+-2 -1.75 -1.5 4 4 4.0%
+-1.5 -1.25 -1 8 12 12.0%
+-1 -0.75 -0.5 14 26 26.0%
+-0.5 -0.25 0 27 53 53.0%
+0 0.25 0.5 14 67 67.0%
+0.5 0.75 1 14 81 81.0%
+1 1.25 1.5 12 93 93.0%
+1.5 1.75 2 6 99 99.0%
+2 2.25 2.5 0 99 99.0%
+2.5 2.75 3 1 100 100.0%
+0.0%
+20.0%
+40.0%
+60.0%
+80.0%
+100.0%
+-1.5 -1 -0.5 0 0.5 1 1.5 2 2.5 3
+Ogive
+Cum Rel Freq
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1 Normal
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1 Uniform
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1 Skewed Right
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1 Skewed Left
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1 J-Shaped
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1 Bi-Modal
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+Cumulative Relative Frequencies
+Normal
+Uniform
+Skew Right
+Skew Left
+J-Shaped
+Bi-Modal
+Normal – S-shaped
+Uniform – Straight Line
+Skewed – Curved
+Multiple Distributions can be plotted
+on a single chart for Comparison
+Cumulative Relative Frequency Plots
+Measures of Central Tendency
+0
+1
+2
+3
+4
+5
+6
+42.5
+43.5
+44.5
+45.5
+46.5
+47.5
+48.5
+49.5
+50.5
+51.5
+52.5
+53.5
+Histogram
+Freq
+Mean = Average
+- Add all the values = 573
+- Divide by the number of values = 12
+- Average = 573/12 = 47.75
+Median = Middle Value
+- Order the data lowest to highest
+43,47,47,47,47,47,48,48,49,49,50,51
+- Odd number of data points – choose middle value
+- Even number of data points – average middle two
+12 data points so average 6th & 7th value
+(47+48)/2 = 47.5
+Mode = Most Frequently Occurring Value
+- Self-explanatory, there are 5 47’s, so 47
+Mid-Range = Midpoint of the Extremes
+- Average of smallest and largest data values
+(43 + 51)/2 = 47
+Mean ( X-bar) is most commonly used, Median is next most common
+Region
+Hours
+Worked
+U.S. 48
+Northeast 47
+Mid-Atlantic 49
+South 47
+Midwest 47
+Central Mt 51
+California 50
+Pacific NW 47
+Canada 43
+Europe 48
+Asia 47
+South America and Africa 49
+Measures of Dispersion
+0
+1
+2
+3
+4
+5
+6
+42.5
+43.5
+44.5
+45.5
+46.5
+47.5
+48.5
+49.5
+50.5
+51.5
+52.5
+53.5
+Histogram
+Freq
+Range = Largest – Smallest Data Value
+- Range = 51 -43 = 8
+Mean Absolute Deviation from the Mean
+- Subtract the Mean from each data value, and
+- Take Absolute Value of result (make positive)
+.25,.25,.75,.75,.75,.75,.75,1.25,1.25,2.25,3.25,4.75
+- Find Mean of resultant data values (1.4167)
+Median Absolute Deviation from the Median (MAD)
+- Subtract the Median from each data value, and
+- Take Absolute Value of result (make positive)
+.5,.5,.5,.5,.5,.5,.5,1.5,1.5,2.5,3.5,4.5
+- Find Median of result (0.5)
+- Divide by 0.6745, scalar to ~1 standard deviation (0.7143)
+Variance
+- Sum Squared Deviations from the Mean = 44.25
+- Divide by Number of data values – 1 = 12 -1 = 11
+- Variance = 44.25/11 = 4.022727
+Standard Deviation = Square Root of the Variance
+- Sqrt(Variance) = Sqrt(4.022727) = 2.005674 Standard Deviation (S) is Most Commonly Used, Range also Common
+Statisticians Like Variances (S2) because they are additive, S is not
+NOTE: Can also be
+expressed as:
+{Sum of Squares –
+n(Mean)2}/(n-1)
+Region
+Hours
+Worked
+U.S. 48
+Northeast 47
+Mid-Atlantic 49
+South 47
+Midwest 47
+Central Mt 51
+California 50
+Pacific NW 47
+Canada 43
+Europe 48
+Asia 47
+South America and Africa 49
+Measures of Position
+0
+10
+20
+30
+40
+50
+60
+70
+80
+Box Plot
+Max
+Q3
+Median
+Q1
+Min
+Quartiles-
+- 1st Quartile (Q1)
+- Value with 25% of the
+Data below it & 75% above
+- 2nd Quartile (Q2) = Median
+- Half data below & half above
+- 3rd Quartile (Q3)
+- Value with 75% of the
+Data below it & 25% above
+- Inter-Quartile Range (IQR)
+- Q3-Q1
+- Includes middle 50% of Data
+- Can be divided by 1.35 to
+approximate 1 standard deviation Percentiles-
+- Analogous to Quartiles
+- kth Percentile (Pk)
+- Value with k% of the
+Data below it & (1-k)% above
+Z-Scores-
+- Number of Standard
+Deviations from Mean
+- (Value – X-bar)/S
+Mean 20.0339
+Median 17
+Mode 16
+Q1 15
+Q3 20.75
+P10 14
+P95 39.6
+Variance 85.86209
+Std Dev 9.26618
+Range 56
+Mean Abs Dev 5.762425
+MAD 2.965159
+IQR 5.75
+…
+Auto Theft
+Offenders
+Garden City,
+Michigan
+Age
+11
+12
+13
+13
+13
+13
+13
+13
+14
+14
+31
+34
+36
+39
+43
+46
+50
+54
+59
+67
+…
+Z-Scores
+-0.975
+-0.867
+-0.759
+-0.759
+-0.759
+-0.759
+-0.759
+-0.759
+-0.651
+-0.651
+1.183
+1.507
+1.723
+2.047
+2.478
+2.802
+3.234
+3.666
+4.205
+5.069
+Measures of Position
+5-Value Summary – Box Plots
+Box (& Whisker) Plots formed using
+5 values from the sample data
+- Box – top = Q3, bottom = Q1
+- Cross-bar in Box = Median
+- Whiskers – top = Max, bottom = Min
+Box Plots do not suffer
+From same subjectivity
+As Histograms, Can be
+Plotted with fewer Data
+Values, and Many Can be
+Plotted on the same Chart
+Normal Uniform Skewed Right
+Skewed Left J-Shaped Bi-Modal
+Normal
+Uniform
+Skew Right
+Skew Left
+J-Shaped
+Bi-Modal
+Using Measures of Position to
+Identify Outliers
+Outliers = Fliers tend to show up in most data sets
+- Do not want them to overly influence the summary and conclusions for the
+majority of the results
+- May carry important information, so source for unusual results should be
+investigated
+Often, flier limits are established using multiples of the Inter-Quartile Range (IQR)
+One common set of flier limits is given by:
+- UFL = Q3 + 2*IQR
+- LFL = Q1 – 2*IQR
+Should erroneously throw out a valid result only about 7 in 10,000 data results (~0.07%)
+If outside these limits, then value is likely to be different than the majority of the data
+Bivariate Data
+Bivariate Data is comprised of two results where there is some
+common bond or link between the results, eg:
+• HDL and LDL cholesterol from the same individual
+• Revenue and Earnings per Share for the same company
+• Tumor size before and after a specific treatment protocol for
+a specific patient
+• Throughput and Yield for a specific manufacturing line
+• Soil acidity and moisture levels for a specific plot of land
+• Strikeouts and Earned Run Average for a specific pitcher
+• Many others
+Generally interested in the relationship between the two
+variables comprising a bivariate data set.
+Summaries by Types of Variables
+Two Qualitative Variables
+Cross-Tabulation Tables
+Political Gender
+Affiliation Female Male All
+Democrat 18 25 43
+Republican 16 21 37
+Other 7 4 11
+All 41 50 91
+By Count
+Political Gender
+Affiliation Female Male All
+Democrat 19.8% 27.5% 47.3%
+Republican 17.6% 23.1% 40.7%
+Other 7.7% 4.4% 12.1%
+All 45.1% 54.9% 100.0%
+By Percentage
+Female
+Male
+0
+5
+10
+15
+20
+25
+Democrat
+Republican
+Other
+Female
+Male
+Bivariate Bar Chart
+Summaries by Types of Variables
+One Qualitative & One Quantitative Variable
+0
+0.01
+0.02
+0.03
+0.04
+0.05
+0.06
+0.07
+0.08
+0.09
+0.1
+Box Plots
+Max
+Q3
+Median
+Q1
+Min
+Side-by-Side Box Plots
+Example
+o 4 Different Tools
+Producing Same
+Product
+(Qualitative)
+o Measurements
+of Critical Dimension
+on Product
+(Quantitative)
+Summaries by Types of Variables
+Two Quantitative Variables
+Scatter Diagrams
+20
+25
+30
+35
+40
+45
+50
+20 25 30 35 40 45 50
+Female Drivers
+Male Drivers
+Licensed Drivers by State
+States with between 2 & 5 Million Male & Female Drivers
+(X 100,000)
+Plot the Data
+0
+5
+10
+15
+20
+25
+30
+0 2 4 6 8 10
+Scatter plots provide a picture of the data
+“A picture is worth a thousand words.” - Confucius
+Here we see the variables are generally linearly related
+with Y increasing as X increases
+There are also some statistics that can be generated to assess the
+nature of the relationship between two variables:
+- Sample Covariance
+- Sample Correlation Coefficient
+Sample Covariance
+Sample Covariance is given as
+sxy = Sum{(xi-xAvg)*(yi-yAvg)}/(n-1),
+where
+(xi, yi), i = 1, …, n form a bivariate data set with
+xAvg = Sum(xi)/n & yAvg = Sum(yi)/n, and all Summations from i = 1 to n.
+sxy > 0
+Positively Related
+As x increases, y increases
+sxy < 0
+Negatively Related
+As x increases, y decreases
+Range for sxy
+-∞ to +∞ So what can the sample covariance tell us about the
+relationship between X and Y?
+What does the sample covariance fail to tell us about
+the relationship between X and Y?
+Linear Correlation Coefficient
+If we normalize the Sample Covariance through division by the respective
+sample standard deviations of the variables X and Y, we obtain the
+Linear Correlation Coefficient, given as
+rxy = sxy/(sx * sy),
+where sx
+2 = Sum{(xi-xAvg)2}/(n-1), sy
+2 = Sum{(yi-yAvg)2}/(n-1),
+with (xi, yi), i = 1, …, n form a bivariate data set,
+xAvg = Sum(xi)/n & yAvg = Sum(yi)/n, and all Summations from i = 1 to n.
+0
+5
+10
+15
+20
+25
+30
+0 2 4 6 8 10
+rxy
+= 0.910
+Range for rxy: -1 to 1
+Same interpretation of sign as
+for Covariance
+Advantage for Linear Correlation
+Coefficient over Covariance:
+Can also measure relative “strength”
+of linear relationship
+Linear Correlation
+Measures LINEARITY of Relationship
+0
+5
+10
+15
+20
+25
+30
+0 2 4 6 8 10 12
+Correlation = -0.865
+Negative Linearity
+0
+2
+4
+6
+8
+10
+12
+14
+16
+0 5 10 15 20
+Correlation = 0.007
+No Linearity
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+0 2 4 6 8 10
+Correlation = 0.000
+0
+1
+2
+3
+4
+5
+6
+0 2 4 6 8 10
+Correlation = 0.662
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+0 2 4 6 8 10 12
+Correlation = 0.536
+Plot Your Data!
+Do Not Rely on
+r Values Alone
+To Assess the
+Relationship
+0
+5
+10
+15
+20
+25
+30
+35
+0 2 4 6 8 10 12
+Correlation = 0.919
+Positive Linearity
+Linear Correlation
+All correlation coefficients = 0.81
+Linear Correlation
+Does Not Necessarily Imply CAUSATION
+Positive Correlation between Life Expectancy, TVs/1000
+Would sending more TVs to Countries Increase Life Expectancy?
+Both Driven More by Wealth or Income per Capita
+Strong Correlation Does NOT Imply Causation; however,
+Causation Generally Results in Some Degree of Correlation
+0
+100
+200
+300
+400
+500
+600
+700
+800
+900
+35 40 45 50 55 60 65 70 75 80 85
+TVs/1000 People
+Life Expectancy (yrs)
+Life Expectancy vs TVs/1000
+r = 0.74
+Sequence Plots
+Univariate data that is collected in sequence (usually, time) is essentially
+bivariate data with the sequence as the second variable.
+All these time series show different behavior, and while plots are always of
+value, there is an entire course dedicated to time series modeling.
+STAT 5340
+Statistical Analysis I
+Inference for Multiple Samples
+Two Sample Problems
+Consider 2 Types of Two Sample Problems:
+1) Paired (Dependent) Samples
+- These samples are “linked “ in some way by observation
+- Results for same individual, same location, same object, etc.
+- Samples will Always be Same Size
+2) Independent Samples
+- No obvious “link” across samples
+- Each group comprised of results for entirely different
+individuals, locations, objects, etc.
+- Samples Not Necessarily of Same Size
+Paired Sample Data
+Suppose we work for an advertising firm, and have prepared a new
+marketing campaign for one of our national clients.
+Before running the campaign nationwide, we want to know if it will
+have sufficient impact to justify such an expense.
+Consequently, we run the campaign in 12 selected test markets
+around the country.
+The data we have is Sales data for the two weeks prior to running
+the new ads in each market, and Sales data for the two weeks
+after running the ads.
+With paired data such as this, we generally consider
+the difference in results for each observation.
+Now the Research Hypothesis becomes:
+H1: µDelta > 0
+and the corresponding Null Hypothesis is:
+H0: µDelta = 0
+“Link” is same Market
+Paired Sample Data
+Test Statistic: T = ( Delta – µDelta)/[SDelta/ ]
+Null Distribution: T ~ t(n-1) = t(11)
+Decision Rule:
+Type I Error: Reject H0 when H0 TRUE
+Conclude Positive Impact when Really None
+Potentially Pursue Campaign when No Added Value
+Type II Error: Fail to Reject H0 when H0 FALSE
+Fail to Recognize Positive Impact of Campaign
+Potentially Lose Revenue if Campaign Not Implemented
+Suggest Small α = 0.01
+Reject H0 if T > 2.718 = t(11,0.99)
+Decision: Delta = 24.6, SDelta = 21.63, so T = 3.94,
+and we Reject H0 since T = 3.94 > 2.718
+Conclude: Marketing Campaign had a positive impact
+on Unit Sales at 0.01 Significance Level
+(p-Value = Observed Sig Level = 0.0012)
+¯
+𝑋 n
+¯
+𝑋
+n = 12 < 30 (small)
+σ Unknown, so T
+Paired Sample Data
+So it appears the Marketing Campaign Has the potential to Increase Unit Sales,
+but by how much?
+Confidence Interval: Best Point Estimate ± M(conf)*(Std Dev of Best Pt. Est.)
+Delta ± M(conf)*[SDelta/ ]
+Delta ± t(n-1,1-α/2)*[SDelta/ ]
+Delta ± t(11,0.995)*[SDelta/ ]
+24.6 ± 3.106 * [ 21.63 / ]
+(5.2 to 44.0)
+So, with 99% Confidence, the Expected Increase in Unit Sales is between
+5,200 and 44,000 Units per Market.
+¯
+𝑋 n
+¯
+𝑋 n 
+¯
+𝑋 n 
+12
+n = 12 < 30 (small)
+σ Unknown, so T
+α = 0.01, α/2 = 0.005,
+so 1 – α/2 = 0.995
+Does this tell us all we need to know to make a decision here?
+For the 12 Markets tested, the Increases above represent a ~2.5% to ~20.9% in
+Unit Sales, but if the Marketing Campaign needs to Increase Sales by 25% in
+order to provide a return greater then the firm’s cost of capital, then it is likely
+the money for the campaign could be better invested elsewhere.
+Important Point: Statistical Significance Does NOT Imply Practical Significance
+Independent Samples Data
+In many situations, we do not have, or are unable to obtain paired results.
+Consider a Sleep Deprivation study.
+There were two sample groups involved:
+Group 1: Sleep Deprived & Group 2: Unrestricted Sleep
+Group 1 had 11 individuals & Group 2 had 10 individuals
+No clear, obvious “link” between individuals across groups, so considered
+Independent
+The measurement of interest was
+Response Time Improvement after 3 days
+- Group 1 was Deprived of Sleep on 1st day after initial test
+- Group 2 was allowed Unrestricted Sleep all 3 days
+Question of Interest is Whether or Not Sleep Deprivation
+Effects Linger for Multiple Days, so
+Research Hypothesis: µUnrestricted – µDeprived > 0
+and
+Null Hypothesis: µUnrestricted – µDeprived = 0
+Improvement Greater for
+Unrestricted Sleep Group
+No Difference in Improvement
+Between Groups
+Independent Samples Data
+Test Statistic: U-bar – D-bar
+Null Distribution: ? n is small for both groups, as well as combined,
+and there is no information about the value of σ,
+for either group, or collectively – suggests we need
+something similar to the T statistic we use for single
+sample hypothesis testing.
+There is an analogous T statistic for two groups …
+If we assume that the data is reasonably normal and
+that the two populations (Deprived & Unrestricted)
+only differ in their mean values (ie, they have a common
+standard deviation, σ – still unknown, however), then
+T = { (U-bar – D-bar) – (µUnrestricted – µDeprived) } /
+Spooled
+*
+~ t(nU + nD -2)
+(1/𝑛𝑈 ) + (1/𝑛𝐷)
+Spooled = [(𝑛𝑈−1)SU2 + (𝑛𝐷−1)SD2] / (𝑛𝑈 +𝑛𝐷−2)
+T as given below
+NOTE: Will be Zero Under Null Model
+Difference in Sample Averages
+Function of the Difference
+In sample Averages
+Independent Samples Data
+Decision Rule:
+Type I Error: Reject H0 when H0 TRUE
+Conclude there are lingering effects of Sleep Deprivation when there
+are none
+Type II Error: Fail to Reject H0 when H0 FALSE
+Fail to recognize real lingering Sleep Deprivation effects
+Suggest α = 0.05
+Reject if T > 1.729 = t(19,0.95)
+NOTE: nU + nD -2 =
+10 + 11 -2 = 19
+Decision:
+T = (U-bar – D-bar)/{Spooled }
+U-bar = 19.82, D-bar = 3.90, nU = 10, nD = 11
+SU = 14.73, SD = 12.17, Spooled = 13.44
+T = 2.711 > 1.729, so Reject H0
+(1/𝑛𝑈 )+(1/𝑛𝐷)
+Conclude: There are lingering effects of Sleep
+Deprivation even 3 days later
+(p-Value = 0.0069)
+Independent Samples Data
+Similar to all the other Hypothesis Tests, this one also has a corresponding
+Confidence Interval. A (1-α)% Confidence Interval for µUnrestricted – µDeprived
+is given by:
+Best Point Estimate ± Mconf * Standard Deviation of Best Point Estimate
+U-bar – D-bar ± Mconf * Spooled *
+U-bar – D-bar ± t(nU + nD -2, 0.975) * Spooled *
+19.82 – 3.90 ± 2.093 * 13.44 *
+15.92 ± 12.29
+( 3.63, 28.21 )
+So, we can state that with 95% confidence, µUnrestricted – µDeprived is between
+3.63 and 28.21 milli-seconds. Note that this interval does not include zero,
+which is consistent with the rejection of H0: µUnrestricted – µDeprived = 0.
+Conclusion is that for the 18-25 year-old age group, there are apparently
+some effects of sleep deprivation that are still present two days after a
+sleep deprived night.
+(1/𝑛𝑈 ) + (1/𝑛𝐷)
+(1/𝑛𝑈 ) + (1/𝑛𝐷)
+(1/10) + (1/11) 
+Comparison of Two Means
+Consider a company that annually distributes bonuses to its employees, but uses a
+rather involved method to determine the size of the bonus (as a percentage of each
+employee’s regular salary) for each individual.
+The primary factor in the method is the evaluation of the employee’s direct
+supervisor, and the Human Resources department is concerned that male
+employees are being routinely rated higher than female employees with a resultant
+difference in annual bonus pay.
+To assess this concern, the HR group randomly sampled some recent bonus pay
+percentages for a number of employees of each gender.
+What might be a reasonable first step?
+12.0
+11.2
+10.4
+9.6
+8.8
+8.0
+7.2
+6.4
+Female
+Male
+Data
+Dot Plots of % Bonus Pay
+Male
+Female
+12
+11
+10
+9
+8
+7
+6
+Data
+Box Plot of % Bonus Pay
+So, the graphs alone suggest that % Bonus Pay is higher for male employees …
+A more formal analysis might include a hypothesis test:
+1) Research Hypothesis: H1: μM > μF, or μM – μF > 0
+2) Null Hypothesis: H0: μM = μF, or μM – μF = 0
+3) Test Statistic:
+1) T = ( M – F)/
+2) with SPooled
+2 = [(nM-1)SM
+2 + (nF-1)SF
+2]/(nM+nF-2)
+4) Null Distribution: t(nM+nF-2)
+5) Decision Rule:
+1) Type I Error: Conclude higher bonus % for Males
+when really no difference – Adjust unnecessarily
+creating higher bonus % for Females
+2) Type II Error: Fail to realize higher bonus % for
+Males – Potential Class Action Suit
+3) Set α = 0.10, Reject H0 if T > t(nM+nF-2, 0.90) = 1.296
+6) Decision:
+1) nM = 36, nF = 24, M = 9.68, F = 8.53,
+SPooled = 1.081, so
+2) T = 4.037 > 1.296; hence, Reject H0
+7) Conclusion: Males at the company receive a higher
+bonus percentage, on average, than the female
+employees (p-Value ≈ 0.0001).
+¯
+𝑋¯
+𝑋 SPooled2(1/𝑛𝑀 + 1/𝑛𝐹 )
+¯
+𝑋¯
+𝑋
+Comparison of Two Means
+-6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6
+Standard Deviations
+Student's-t Distribution
+Rejection Region
+P[t(59) > 1.296] = 0.10
+Clearly, this result is unsatisfactory, we would want to
+know how much higher.
+A 90% Confidence Interval for the Difference is obtained
+as
+M – F ± t(nM+nF-2, 0.95)*SDifference,
+where
+SDifference = SPooled
+*
+.
+With the available data, this result is
+1.15 ± 0.48 = (0.67 to 1.62),
+so the answer to “How Much?” is that we have 90%
+confidence that bonus percentages are 0.67% to 1.62%
+higher for male employees.
+¯
+𝑋¯
+𝑋
+1/𝑛𝑀 + 1/𝑛𝐹
+NOTE: There is an implicit assumption being made here that
+the variance for the Male and Female bonus percentages are
+the same value (ie, σM
+2 = σF
+2). This may or may not be
+reasonable. If not, then the test needs to be modified.
+Comparison of Two Means
+If the variances of the two populations of interest are not equal, then pooling the data across the
+two samples (to obtain SPooled) is no longer appropriate.
+The test statistic, T, is modified as follows:
+T = ( M – F)/
+However, an issue arises in determining the sampling distribution for this statistic since when no
+longer pooling the samples, we no longer have fully nM + nF - 2 degrees of freedom with which to
+estimate the standard deviation of the difference in the sample means.
+¯
+𝑋¯
+𝑋 SM2/𝑛𝑀 + SF2/𝑛𝐹
+So … while T can still be approximated by a student’s t distribution, what degrees of freedom (df)
+are appropriate?
+One common, and easy approach is to use
+df = min(nM - 1, nF - 1)
+Since we know there are nM - 1 and nF - 1 df for SM
+2 and SF
+2, respectively, choosing the minimum of these
+two values provides a conservative approach (recall, lower df results in heavier tails, so critical values and
+p-values will be larger in magnitude, and rejection of H0 less likely).
+A more accurate approach is to use
+df = [(A + B)2/{A2/(nM-1) + B2/(nF-1)}], where A = SM
+2/nM, B = SF
+2/nF, and [x] = greatest integer in x
+This will result in a value between min(nM - 1, nF - 1) and nM + nF - 2.
+The hypothesis test procedure is modified as in red:
+1) Research Hypothesis: H1: μM > μF, or μM – μF > 0
+2) Null Hypothesis: H0: μM = μF, or μM – μF = 0
+3) Test Statistic: If unwilling to assume σM=σF, we use
+1) T = ( M – F)/
+4) Null Distribution: t(df)
+1) where df = [(A+B)2/(A2/(nM-1) + B2/(nF-1))],
+2) with A = SM
+2/nM, B = SF
+2/nF, and
+3) [x] = greatest integer in x.
+5) Decision Rule:
+1) With α = 0.10, Reject H0 if T > t(df=43, 0.90) = 1.302
+6) Decision:
+1) nM = 36, nF = 24, M = 9.68, F = 8.53,
+SM = 1.00 and SF = 1.19, so
+2) T = 3.901 > 1.302; hence, Reject H0
+7) Conclusion: Males at the company receive a higher
+bonus percentage, on average, than the female employees
+(p-Value ≈ 0.000166).
+¯
+𝑋¯
+𝑋 SM2/𝑛𝑀 + S2F/𝑛𝐹
+¯
+𝑋¯
+𝑋
+Comparison of Two Means
+-6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6
+Standard Deviations
+Student's-t Distribution
+Rejection Region
+P[t(43) > 1.302] = 0.10
+To borrow from a famous bard, is this “much ado
+about nothing”?
+A 90% Confidence Interval for the Difference is obtained
+as
+M – F ± t(df, 0.95)*SDifference,
+where
+SDifference = .
+With the available data, this result is
+1.15 ± 0.50 = (0.65 to 1.65),
+and we have 90% confidence that bonus percentages are
+0.65% to 1.65% higher for male employees.
+¯
+𝑋¯
+𝑋
+SM2/𝑛𝑀 + SF2/𝑛𝐹
+Well, in this case, this is close to valid, as there is
+not much difference in variation across the groups.
+So, most analysts simply assume unequal
+variances across groups, because if TRULY same,
+results will be very similar if had assumed same.
+Comparison of Two Means
+HR Data:
+R Code:
+> hr_data = read.csv("HR Data.csv")
+> hr_data
+Female Male
+1 9.2 10.4
+2 7.7 8.9
+3 11.9 11.7
+4 6.2 12.0
+5 9.0 8.7
+6 8.4 9.4
+7 6.9 9.8
+8 7.6 9.0
+9 7.4 9.2
+10 8.0 9.7
+11 9.9 9.1
+12 6.7 8.8
+13 8.4 7.9
+14 9.3 9.9
+15 9.1 10.0
+16 8.7 10.1
+17 9.2 9.0
+18 9.1 11.4
+19 8.4 8.7
+20 9.6 9.6
+21 7.7 9.2
+22 9.0 9.7
+23 9.0 8.9
+24 8.4 9.2
+25 NA 9.4
+26 NA 9.7
+27 NA 8.9
+28 NA 9.3
+29 NA 10.4
+30 NA 11.9
+31 NA 9.0
+32 NA 12.0
+33 NA 9.6
+34 NA 9.2
+35. NA 9.9
+36. NA 9.0
+NOT Assuming Equal Variances:
+NOTE: One-sided options (eg,
+“greater”) produce one-sided
+confidence bounds. To obtain
+two-sided confidence bounds,
+use: “two.sided” (default).
+> female = hr_data[,1]
+> male = hr_data[,2]
+>
+> t.test(male, female, alternative = "greater", var.equal = TRUE)
+Two Sample t-test
+data: male and female
+t = 4.0367, df = 58, p-value = 8.044e-05
+alternative hypothesis: true difference in means is greater than 0
+95 percent confidence interval:
+0.6738034 Inf
+sample estimates:
+mean of x mean of y
+9.683333 8.533333
+Assuming Equal Variances:
+> t.test(male, female, alternative = "greater")
+Welch Two Sample t-test
+data: male and female
+t = 3.9013, df = 43.587, p-value = 0.0001635
+alternative hypothesis: true difference in means is greater than 0
+95 percent confidence interval:
+0.6546071 Inf
+sample estimates:
+mean of x mean of y
+9.683333 8.533333
+Comparison of Two Variances
+So, what about a statistical comparison of two population variances (or standard deviations)?
+Can we test to see if the assumption of equal variances is reasonable or not?
+1) Research Hypothesis: H1: σM
+2 ≠ σF
+2
+2) Null Hypothesis: H0: σM
+2 = σF
+2
+3) Test Statistic: ?
+1) F = SF
+2/SM
+2, ratio of Sample Variances
+2) SF
+2 = Sample Variance for Females
+3) SM
+2 = Sample Variance for Males
+4) Generally, put Larger Sample Variance in
+Numerator, but not necessary since this
+is a two-tailed hypothesis test.
+4) Null Distribution: ?
+1) Under H0, F ~ F(nF-1, nM-1)
+2) F distributions indexed by 2 degrees of
+freedom values (numerator &
+denominator)
+3) Requires samples to be
+1) Independent
+2) Random
+3) From a Normal Distribution
+5) Decision Rule:
+1) w/ α=0.05, Reject H0 if
+2) F < 0.45 or F > 2.07
+6) Decision:
+1) SF
+2 = 1.41, SM
+2 = 1.01
+2) F = 1.40, so Fail to Reject H0
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+0 1 2 3 4 5
+F-Distribution
+F-Dist w/ 23 & 35 df
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+0 1 2 3 4 5
+F-Distribution
+F-Dist w/ 23 & 35 df
+Critical Region – High
+P[F > 2.07] = α/2 = 0.025
+Critical Region – Low
+P[F < 0.45] = α/2 = 0.025
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+0 1 2 3 4 5
+F-Distribution
+F-Dist w/ 23 & 35 df
+p-Value
+P[F > 1.40] = 0.181
+NOTE: Frequently, for two-sided cases, software packages
+will report twice the value above, or a p-Value = 0.362.
+However, in this case, a more appropriate consideration of
+the lower tail would be to calculate P[F < 1/1.40] = 0.200,
+then add this to the above to get a p-Value = 0.381.
+Differences Between Two Standard Deviations
+In the Sleep Deprivation study, when evaluating the means of the two groups, we pooled
+the information on variation by calculating a pooled standard deviation. The inherent
+assumption here was that the two samples came from populations with the same (or at
+least very nearly the same) variance. We can check this assumption:
+Research Hypothesis: H1: σ1 ≠ σ2
+Null Hypothesis: H0: σ1 = σ2
+Test Statistic: F = [S1
+2/σ1
+2]/[S2
+2/σ2
+2]
+Null Distribution: F(n1-1, n2-1)
+Provided both populations follow normal distributions
+Decision Rule: Reject H0 if
+F < F(n1-1, n2-1, α/2) or F > F(n1-1, n2-1, 1-α/2),
+with α=0.05, n1 = 10, n2 = 11:
+F < 0.25 or F > 3.78
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0 1 2 3 4 5
+fF(x)
+x
+F Probability Density Function
+df1 = 9, df2 = 10
+α/2 = 0.025
+Decision: with S1 = 14.73 & S2 = 12.17
+Sleep Deprivation Study data
+F = (14.73/12.17)2 = 1.465
+Conclusion: Data do not present sufficient evidence to conclude different variances
+for the two groups (p-Value ≈ 0.280).
+Comparison of Two Variances
+The assumption of Normally distributed populations being involved is an important one for use of the
+F-Distribution to make inferences about the two respective variances.
+Consequently, it is generally desirable to evaluate this assumption prior to using this approach, or to
+use a different approach.
+Evaluation for HR Data:
+5
+6
+7
+8
+9
+10
+11
+12
+13
+-3 -2 -1 0 1 2 3
+Observed Data
+Normal Quantiles
+Normal QQ Plot - Females
+Correlation
+r = 0.9659
+0.9659
+0.114
+0.920
+0.930
+0.940
+0.950
+0.960
+0.970
+0.980
+0.990
+1.000
+0 0.2 0.4 0.6 0.8 1
+Correlation (r)
+P[Test Statistic < r | Data Normal]
+Critical Values for Correlation Statistic
+n = 24 Corr Val ~p-Value
+Conclusion:
+Insufficient evidence
+to indicate Female
+results are not
+normally distributed.
+(So assumption of
+normality considered
+reasonable.)5
+6
+7
+8
+9
+10
+11
+12
+13
+-3 -2 -1 0 1 2
+Observed Data
+Normal Quantiles
+Normal QQ Plot - Males
+Correlation
+r = 0.9283
+0.9283
+0.005
+0.920
+0.930
+0.940
+0.950
+0.960
+0.970
+0.980
+0.990
+1.000
+0 0.2 0.4 0.6 0.8 1
+Correlation (r)
+P[Test Statistic < r | Data Normal]
+Critical Values for Correlation Statistic
+n = 36 Corr Val ~p-Value
+Conclusion:
+Evidence suggests
+Male results are not
+normally distributed.
+(So assumption of
+normality considered
+unreasonable.)
+F-Test may not have generated
+valid conclusion.
+Comparison of Two Variances
+So … what do we do now?
+Consider a different approach that does not depend on Normality.
+One relatively easy test is described as follows:
+1) Calculate the absolute deviations from the sample mean
+(ie, |xi – |) for each respective sample
+2) Order these within each sample from largest to smallest
+3) Let c1 = number of results for sample 1 greater than the
+largest result for sample 2
+4) Let c2 = number of results for sample 2 greater than the
+largest result for sample 1
+Note: At least one of c1 or c2 must be zero.
+5) If c1 > Critical Value, then conclude σ1 > σ2
+6) If c2 > Critical Value, then conclude σ2 > σ1
+Note: Critical Value = ln(α/2)/ln[n1/(n1+n2)]
+7) Otherwise, conclude insufficient evidence to Reject σ1=σ2
+¯
+𝑥
+Data
+Mean
+Absolute
+Deviations
+Sorted
+Mean
+Absolute
+Deviations
+For the HR Data …
+c1 = cF = 2 (and c2 = cM = 0)
+Critical Value = 4.02 (w/ α=0.05)
+Conclude: Insufficient evidence to indicate
+σF ≠ σM.
+NOTE: This is consistent with the F-Test result.
+Comparison of Two Variances
+Another commonly used alternative approach that does not require the assumption of Normality is
+the Levene-Brown-Forsythe test.
+The Levene test can be described as follows:
+1) Calculate the absolute deviations from the sample median
+(ie, |xi – |) for each respective sample
+2) Test the hypothesis of equal means for these absolute deviations
+from the median treating them as independent samples with
+potentially different variances
+~
+𝑥
+Data
+Median
+Absolute
+Deviations
+1) Research Hypothesis: H1: μMdAD-F ≠ μMdAD-M, or μMdAD-F – μMdAD-M ≠ 0
+2) Null Hypothesis: H0: μMdAD-F = μMdAD-M, or μMdAD-F – μMdAD-M = 0
+3) Test Statistic:
+1) T = ( MdAM-F – MdAD-M)/
+4) Null Distribution: t(df)
+1) where df = [(A+B)2/(A2/(nM-1) + B2/(nF-1))],
+2) with A = SMdAD-M
+2/nM, B = SMdAD-F
+2/nF, and
+3) [x] = greatest integer in x.
+5) Decision Rule:
+1) With α = 0.05, Reject H0 if
+2) T > t(df=48, 0.975) = 2.011 or T < t(df=48, 0.025) = -2.011
+6) Decision:
+1) nM = 36, nF = 24, MdAD-F = 0.88, MdAD-M = 0.72,
+SMdAF-F = 0.77 and SMdAD-M = 0.75, so
+2) T = 0.827, between ±2.011; hence, Fail to Reject H0
+7) Conclusion: Insufficient evidence to indicate difference in mean
+absolute deviations from medians (ie, variances) across populations
+(p-Value ≈ 0.206, note, since 2-sided, some software doubles to 0.412).
+¯
+𝑋¯
+𝑋 SMdAD−F2/𝑛𝐹 + S2MdAD−M/𝑛𝑀
+¯
+𝑋¯
+𝑋
+NOTE: The conclusion is still consistent with the other approaches.
+Comparison of Two Variances
+HR Data: Test for Equal Variances
+MINITAB: Stat → Basic Statistics → 2 Variances
+Test for Equal Variances: Female, Male
+95% Bonferroni confidence intervals for standard deviations
+N Lower StDev Upper
+Female 24 0.892753 1.18896 1.75726
+Male 36 0.791041 1.00385 1.36343
+F-Test (Normal Distribution)
+Test statistic = 1.40, p-value = 0.358
+Levene's Test (Any Continuous Distribution)
+Test statistic = 0.69, p-value = 0.408
+Test for Equal Variances for Female, Male
+Male
+Female
+1.8
+1.6
+1.4
+1.2
+1.0
+0.8
+95% Bonferroni Confidence Intervals for StDevs
+Male
+Female
+12
+11
+10
+9
+8
+7
+6
+Data
+Test Statistic 1.40
+P-Value 0.358
+Test Statistic 0.69
+P-Value 0.408
+F-Test
+Levene's Test
+Test for Equal Variances for Female, Male
+What are “Bonferroni” confidence intervals?
+What is a confidence interval?
+Recall: A (1-α)% Confidence Interval implies the parameter of
+interest will be in the interval (1-α)% of the time such an interval is
+obtained.
+Hence, α% of the time such intervals will fail to include the
+parameter of interest.
+Now, two (1-α)% confidence intervals obtained from independent
+samples from two different populations will each fail to include
+their respective parameters of interest α% of the time.
+Let A = Event that the 1st Interval Does Not Include its respective
+Parameter, then P[A] = α
+Let B = Event that the 2nd Interval Does Not Include its respective
+Parameter, then P[B] = α
+The probability that at least one of the intervals fails to include its
+respective parameter is P[A or B], so by the Compliment Rule, the
+probability that both intervals INCLUDE their respective
+parameters is 1 – P[A or B], but we know from the Additive Rule
+that
+1 - P[A or B] = 1 – {P[A] + P[B] – P[A and B]}
+= 1 – P[A] – P[B] + P[A and B]
+> 1 – P[A] – P[B] = 1 – 2α, Bonferroni’s Inequality.
+Hence, with α=0.05, two independent 95% confidence intervals
+have at least a 90% probability of both including their respective
+parameters, and would be referred to as 90% “Bonferroni”
+confidence intervals.
+The 95% “Bonferroni” confidence intervals at left are obtained by
+calculating individual 97.5% confidence intervals for each of the
+respective parameters (in this case, σF and σM).
+Independent Samples Data
+Variances within Groups Unequal
+Example: In Workshop 1, it was observed that in addition to having more variable gate widths,
+C Shift also appeared to have widths averaging higher than the other shifts. Consider
+comparing the averages observed on C & D Shifts (since D Shift was near target = 100nm).
+90
+92
+94
+96
+98
+100
+102
+104
+106
+108
+110
+Box Plots
+Max
+Q3
+Median
+Q1
+Min
+Fairly obvious that variances within shifts are
+different, but F = SC2/SD
+2 = 11.43 (p-Value≈0.0003);
+hence, using SPooled would be inappropriate when
+testing if µC > µD.
+Research Hypothesis: µC > µD.
+Null Hypothesis: µC = µD.
+Test Statistic: T = (X-barC – X-barD)/
+sqrt(SC2/nC + SD
+2/nD)
+Null Distribution: t(12), where df from Welch
+Decision Rule: Reject H0 if T > t(12,α=0.05) = 1.782
+Decision: T = 2.031, so Reject H0, and
+Conclude: C Shift Gate Widths are Larger than
+those produced on D Shift (p-Value ≈ 0.0325).
+A 90% confidence interval for how much larger is determined as:
+(X-barC – X-barD) ± 1.782*sqrt(SC2/nC + SD
+2/nD) = 2.818 ± 1.782*1.388 = ( 0.35nm to 5.29nm) ,
+so with 90% confidence, C Shift gate widths are between 0.35nm & 5.29nm larger than those produced
+on D Shift
+Independent Samples Data
+Differences Between Two Proportions
+Suppose we work for a manufacturer of textiles, and suspect that one
+of the machines producing fabric is producing more bolts with defects
+than the others.
+For a given time period, we sample 100 bolts from this machine and find
+12 with defects.
+During the same period, we also sample 200 bolts across the other
+machines in operation and find 15 with defects.
+Question here is whether or not the machine of interest is producing
+a higher rate of defective bolts than the other machines, so ...
+Research Hypothesis: πDefective,Machine – πDefective,Others > 0
+and
+Null Hypothesis: πDefective,Machine – πDefective,Others = 0
+Defect Rate Greater for
+Machine of Concern
+No Difference in Defect Rates
+Between Machine of Concern
+and Others in Operation
+Test Statistic: pMachine – pOthers
+Null Distribution: ? Recall that sample proportions are averages in
+disguise; hence, we can make use of the Central
+Limit Theorem, and
+Difference in Sample Proportions Defective
+pMachine – pOthers ~ N( 0 , sqrt{π*(1-π)[1/nM + 1/nO]})
+However, we do not know what under the null model would
+be a common defect rate, π, so we will need to estimate it
+from the available sample data.
+Under the Null Model, Defective Rates Same = π
+Given the common defect rate under the null model, the
+best estimate of π would be:
+pDefect = (nDefect,M + nDefect,O) / (nM + nO)
+= (12 + 15) / (100 + 200)
+= 27 / 300
+= 0.09
+Independent Samples Data
+Differences Between Two Proportions
+So … pMachine – pOthers ~ N( 0 , sqrt{0.09*(1-0.09)[1/100 + 1/200]})
+~ N( 0 , 0.035),
+where π estimated by pDefect = 0.09
+-0.105 -0.07 -0.035 0 0.035 0.07 0.105
+Decision Rule:
+Type I Error: Reject H0 when H0 TRUE
+Conclude the Machine is producing a higher rate of defectives when it
+is not
+Type II Error: Fail to Reject H0 when H0 FALSE
+Fail to recognize Machine is actually producing higher rate of
+defectives
+Suggest α = 0.05
+Reject if pMachine – pOthers > z(0.95)*0.035
+Decision:
+pMachine – pOthers = (nDefect,M/nM) - (nDefect,O/nO)
+= 12/100 – 15/200
+= 0.12 – 0.075
+= 0.045 < 0.058, so
+Fail to Reject H0
+Conclude: There is insufficient evidence to conclude
+Machine is producing higher defect rate
+than the Other machines in operation.
+(p-Value = 0.0996)
+Independent Samples Data
+Differences Between Two Proportions
+-0.105 -0.07 -0.035 0 0.035 0.07 0.105
+α = 0.05
+Critical
+Value
+= 0.058
+1.645
+= 0.058
+Again, just as with all the other Hypothesis Tests, this one also has a corresponding
+Confidence Interval. A (1-α)% Confidence Interval for πDefective,Machine – πDefective,Others
+is given by:
+Best Point Estimate ± Mconf * Standard Deviation of Best Point Estimate
+pMachine – pOthers ± M(1-α/2) * sqrt[pDefect*(1-pDefect)*(1/nM) + (1/nO)]
+pMachine – pOthers ± z(0.975) * sqrt[pDefect*(1-pDefect)*(1/nM) + (1/nO)]
+0.12 – 0.075 ± 1.96 * sqrt[0.09*(1-0.09)*(1/100) + (1/200)]
+0.045 ± 0.069
+( -0.024, 0.114 )
+So, we can state that with 95% confidence, πDefective,Machine – πDefective,Others is between
+-2.4% and 11.4%. Note that this interval does include zero, which is consistent
+with the failure to reject H0: πDefective,Machine – πDefective,Others = 0.
+Conclusion is still that there is insufficient evidence in the sample data to conclude
+that the defect rate for the suspect machine is higher than that for the other
+machines in operation.
+Independent Samples Data
+Differences Between Two Proportions
+What if we had Rejected H0? Then using pDefect in the calculation of the Standard
+Deviation of the Best Point Estimate (which amounts to “pooling” data) is no longer a
+valid approach – we have evidence the two proportions are different; hence their
+respective standard deviations are also different. In this case, a (1-α)% Confidence
+Interval for πDefective,Machine – πDefective,Others is given by:
+Best Point Estimate ± Mconf * Standard Deviation of Best Point Estimate
+pMachine – pOthers ± z(1-α/2) * sqrt[pMachine*(1-pMachine)/nM + pOthers*(1-pOthers)/nO]
+Suppose we observed 16 Defective Bolts in the sample of 100 from the suspect Machine, then
+pMachine = 0.16, and would lead to rejection of H0, then 95% CI would be:
+pMachine – pOthers ± z(0.975) * sqrt[pMachine*(1-pMachine)/nM + pOthers*(1-pOthers)/nO]
+0.16 – 0.075 ± 1.96 * sqrt[0.16*(1-0.16)/100) + 0.075*(1-0.075)/200)]
+0.085 ± 0.081
+( 0.004, 0.166 )
+Then we could state that with 95% confidence, πDefective,Machine – πDefective,Others is
+between 0.4% and 16.6%. Note that this interval does not include zero, which is
+consistent with rejection of H0: πDefective,Machine – πDefective,Others = 0.
+Conclusion would now be that the defect rate for the suspect machine is 0.4% to
+16.6% higher (with 95% confidence) than that for the other machines in operation.
+Independent Samples Data
+Differences Between Two Proportions
+Comparison of Two Proportions
+There is a requirement for the normal approximation to be valid in the comparison
+of proportions: the expected number of results within each of the table “cells”
+should be larger than 5.
+This is equivalent to min[n1, n2]*min[pTot, (1-pTot)] > 5.
+For the textile machine problem, the value of min[nM, nO] = 100 is sufficiently large
+that this not an issue [min(pTot, 1-pTot) = 0.09, and 0.09*100 = 9].
+However, consider a clinical trial of two drug therapies for leukemia: P and PV,
+where 21 patients were assigned to P and 42 were assigned to drug PV, with the
+following results:
+Here,
+min[nP, nPV] = 21
+and
+min[pTot, 1-pTot] = 0.175,
+so
+21*0.175 ≈ 3.67 < 5
+So, how can we test whether PV is in fact a more successful treatment than drug P?
+Comparison of Two Proportions
+Commonly, Fisher’s Exact Test is utilized.
+The idea is that if both drugs are equally
+successful in treating leukemia, then the total
+number of successes (here, this is 52) should be
+distributed across the drugs reasonably close to
+proportionally to the respective numbers of
+patients treated with each of the drugs.
+So, as the number of successes increases for the group with the highest number of
+successes, this would suggest that the true probability of success for this drug (here, πPV) is
+greater than that for the other (ie, πP).
+We can use the hypergeometric distribution to assess the probability of observing at least as
+many PV drug successes as were actually observed if the probability of successful
+treatments is the same (ie, πPV = πP).
+The test statistic is X = max(pP, pPV)*nmax(pP,pPV) = number of successes for group with
+highest success rate (X=38 here). Under H0: πPV = πP, the p-Value for this test is given by:
+∑j=X to min(nPV,nS) P[j Successes of nPV Patients | pPnP+pPVnPV = nS Total Successes] =
+∑j=X to min(nPV,nS) C(nPV,j)*C(nP, nS-j)/C(nTot, nS) = 0.0254, where C(a, b) = a!/[b!(a-b)!], a ≥ b
+Hence, if α > 0.0254, then there is sufficient evidence to reject H0, and conclude that the PV
+drug therapy has a higher success rate in treating leukemia than the drug P.
+Comparison of Two Proportions
+Textile Machines
+Minitab: Stat→ Basic Statistics → 2 Proportions
+Test and CI for Two Proportions
+Sample X N Sample p
+1 12 100 0.120000
+2 15 200 0.075000
+Difference = p (1) - p (2)
+Estimate for difference: 0.045
+95% CI for difference: (-0.0284104, 0.118410)
+Test for difference = 0 (vs not = 0): Z = 1.20 P-Value = 0.230
+Fisher's exact test: P-Value = 0.206
+Drug Trials
+Minitab: Stat→ Basic Statistics → 2 Proportions
+Test and CI for Two Proportions
+Sample X N Sample p
+1 38 42 0.904762
+2 14 21 0.666667
+Difference = p (1) - p (2)
+Estimate for difference: 0.238095
+95% lower bound for difference: 0.0532147
+Test for difference = 0 (vs > 0): Z = 2.35 P-Value = 0.009
+Fisher's exact test: P-Value = 0.025
+* NOTE * The normal approximation may be inaccurate for small samples.
+Test and CI for Two Proportions
+Sample X N Sample p
+1 16 100 0.160000
+2 15 200 0.075000
+Difference = p (1) - p (2)
+Estimate for difference: 0.085
+95% CI for difference: (0.00440579, 0.165594)
+Test for difference = 0 (vs not = 0): Z = 2.07 P-Value = 0.039
+Fisher's exact test: P-Value = 0.027
+Sample Data From 3 or More Groups
+Frequently, more than a single separation of a relevant data set is involved resulting in
+comparisons across more than two groups.
+When we move into multiple comparisons for more than two groups, the approaches we
+have considered to this point need to be modified to be successfully extended.
+Consider an example where several different herbicide mixtures (A, B, & C) are to be
+evaluated for their effect on plant growth. Six plants were assigned at random to receive one
+of these herbicides during the study period. The data are the additional growth for each plant
+over the study period (in cm).
+Research Hypothesis: H1: µi ≠ µj, for some i ≠ j,
+i,j = A, B, C
+Null Hypothesis: H0: µA = µB = µC
+Test Statistic: F = S2
+Between/S2
+Within
+Provided data are normally distributed & variances within groups are equal
+Null Distribution: F(nG-1, n-nG) (where nG=3, the number of groups)
+Decision Rule: Reject H0 if F > F(nG-1, n-nG, 1-α)
+Decision: F = S2
+Between/S2
+Within >
+= 571.6/14.3
+= 39.97 > F(2,15, 0.95) = 3.68,
+so Reject H0 in Favor of H1.
+Conclude: The average additional growth is different with respect to the different herbicide applied.
+So why this test statistic and how is it specifically determined from the data?
+Sample Data From 3 or More Groups
+When more than two groups are involved and we are interested in determining if the respective populations
+from which the samples within each have been acquired have different population mean values, then the
+approach most often utilized is Analysis of Variance.
+The approach, often abbreviated as ANOVA, simply compares the variation between group averages to the
+variation of the results within groups. Hence, the name refers to “variance” when it is actually an evaluation
+of the group means.
+The concept is that if there are no differences between the population means from which the respective
+sample groups have been obtained, then all the data is from essentially the same population, and the group
+averages* would not be expected to vary any more than the individual data values. The “*” is included to
+note that these group averages need to be properly scaled … why?
+The CLT tells us that Var(X-bar) = σ2/n, where σ2 is the variance of individual results and n is the number of
+individual results comprising the sample, so need to multiply Var(X-bar) by n for it to have the same
+variation as individual results.
+The most popular means of outlining an Analysis of Variance is through use of an ANOVA table:
+Herbicide Data In general,
+Source: Identifies the Factors involved, last two rows are virtually
+always “Error” and “Total”
+df: Respective Degrees of Freedom for each Source of Variation,
+for a 1-way ANOVA dfFactor = nG -1, where nG = number of groups
+SS: Sums of Squares for each Source of Variation, for a balanced
+1-way ANOVA, these are:
+Factor: nW∑i=1 to nG (Yi-bar – Y-bar)2
+, nW = number within each group
+Error: ∑i=1 to nG∑j= 1 to nW(Yij – Yi-bar)2
+Total: ∑i=1 to nG∑j=1 to nW(Yij – Y-bar)2
+, SSTotal = Sum of all rows above
+MS: Mean Squares for each Source of Variation, MSi = SSi/dfi, for all
+rows of the table, except the “Total” row.
+F: F statistic(s), generally MSi/MSE, where MSE = MS for “Error” row
+p-Value: Respective p-Values for each F statistic
+Note: MSB = nW*SB
+2, where SB
+2 = Variance of the
+Group Averages, and
+MSW = SW
+2, where SW
+2 = Average of the
+Within Group Variances
+If no difference in group means, these are both
+estimators of σ2, the population variance.
+Sample Data From 3 or More Groups
+Note that the implied statistical model involved here is a little more involved than the simple
+Mean + Error model outlined previously. The model implied in the simple, balanced 1-way
+ANOVA situation of the previous examples is:
+Yij = µ + αi + εij, i = 1, …, g (the number of groups) and j = 1, …, m (number of results for each group)
+where Yij = the jth result from the ith group,
+µ = an overall mean level for the data,
+αi = an offset for the mean level of the ith group from the overall mean (so µi = µ + αi),
+εij = random error term
+The assumptions for this model include Σi=1 to g αi = 0 and εij ~ NID(0, σ2).
+So … when we reject H0: all µi equal in favor of H1: µi ≠ µj for some i ≠ j, the result is still
+unsatisfactory. Why?
+Of course, it does not provide any idea as to which group means are likely to be different,
+let alone how much different they might be.
+For single and two-sample problems, the tool used to address the “How Much?” question
+was a confidence interval. A similar approach can be used with 3 or more groups, but there
+is a need to be careful. Why?
+Sample Data From 3 or More Groups
+For g groups, there are effectively
+g*(g-1)/2 comparisons to be
+made.
+As more intervals are required
+and the likelihood of all intervals
+containing their respective
+parameters can be much lower
+than the stated confidence level
+for any one interval.
+For g = 3, there are only 3
+comparisons to be made, but if
+we use 90% confidence level for
+all the relevant intervals, then the
+probability of one not including the
+true µi – µj value is relatively large
+(~27% = 1 - .93).
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+0 5 10 15 20
+Experiment Wide Error Rate
+Number of Groups
+Experiment Wide Error Rates
+0.95
+0.9
+Individual
+Interval
+Confidence
+Levels
+Sample Data From 3 or More Groups
+There are a variety of approaches to address this issue and these are all described in some
+detail in the text (see Chapter 9). Effectively, they all are of the form:
+Y-bari – Y-barj ± M(α)*Std Deviation of (Y-bari – Y-barj)
+where the Std Deviation(Y-bari – Y-barj) = Sqrt(2*MSE/m), with MSE = Mean Square Error
+from the associated ANOVA table, and m = number of results for each group.
+The differences between the most widely used approaches involve the multiplier M(α).
+Approach Multiplier Comment
+Fisher’s Least Significant
+Difference (LSD)
+t(N-g,1-α/2) The multiplier is the upper α/2 percentile point of a Student’s-t distribution with N-
+g degrees of freedom, where N = total number of observations, and g = the
+number of groups, only applied after rejecting H0: all means equal via F test. These
+intervals do not protect against experiment-wide error, but the rejection via the F
+test implies at least one group mean is different from the others.
+Tukey’s Honest Significant
+Interval (HSI)
+q(g, N-g)/sqrt(2) Requires a table for the q(.) values (Table 10 in your text has values for α =0.01 &
+0.05). These are critical values for the studentized range statistic, which protects
+experiment-wide error.
+Bonferroni Confidence
+Intervals (BCI)
+t(N-g, 1-α/[g(g-1)]) The multiplier is the upper α/[g(g-1)] percentile point of a Student’s-t distribution
+with N-g degrees of freedom. The divisor here protects for experiment-wide error.
+Sample Data From 3 or More Groups
+Regardless of which approach is used, graphically displaying the results can become complicated,
+especially as the number of groups (g) increases.
+One way to overcome this is to plot each group mean (Y-bari) ± half the width of the respective interval
+being used. On such a plot, and intervals that do not overlap indicate differences between those group
+means.
+Be careful not to use these intervals as confidence intervals for the specific means. The intervals being
+plotted will be narrower than intervals with the same confidence for each specific group mean.
+For the herbicide example, the respective half-width intervals appear below (α = 0.05):
+65
+70
+75
+80
+85
+90
+95
+Growth (cm)
+Herbicide
+LSD Intervals
+A B C
+65
+70
+75
+80
+85
+90
+95
+Growth (cm)
+Herbicide
+HSI Intervals
+A B C
+65
+70
+75
+80
+85
+90
+95
+Growth (cm)
+Herbicide
+BCI Intervals
+A B C
+Clearly, in this case, all the group means are different, with Herbicide C providing the most growth and
+Herbicide A the least. Actually, Herbicide A in this instance was a control group (ie, no herbicide).
+Sample Data From 3 or More Groups
+What about groups with unequal variances?
+Recall that the 1-way ANOVA procedure assumes similar variation for each group.
+Can we test to see if this is valid?
+One test is to simply consider the ratio of the largest within group variance to that of the smallest
+(Hartley’s Fmax Test):
+Fmax = Smax
+2/Smin
+2
+Critical values for this test appear in Table 12, for α = 0.05 and 0.01. Each table is entered with the
+number of groups involved (Table columns) & the common group sample size less 1 (ie, nW – 1, for Table
+rows). Note this test was developed assuming equal sample sizes for each group, but if they are close,
+then can use something like a harmonic mean of the ni values.
+Another test for equal variances would be the Brown-Forsythe-Levine (BFL) test. This test essentially
+involves a 1-way ANOVA of a newly constructed variable vij = |yij – mi|, where mi = median of the results
+for the ith group. This can involve some computations, but is available in many software packages.
+If no such package is available, then the BFL test statistic is calculated as:
+L = {∑i=1 to g ni(V-bari – V-bar)2/(g – 1)} / {∑i=1 to g ∑j=1 to ni (vij – V-bari)2/(N – g)},
+where g = number of groups and N = ∑i=1 to g ni; which is simply MSBv/MSEv, so the critical value is
+determined from the upper tail of an Fg-1,N-g distribution. Note L can be evaluated for unequal group
+sizes.
+This test is preferred also because it is less sensitive to departures from normality. Although the Hartley
+test is more powerful when the data is indeed normal, it is usually more desirable to keep the Type I error
+rate low in these tests, and this can become large for the Fmax test as conditions depart from the basis for
+its development (ie, equal group sizes and normally distributed data). Also, a special table of critical
+values is unnecessary for the BFL test.
+Sample Data From 3 or More Groups
+Herbicide example:
+Research Hypothesis: H1: Population variances not all equal.
+Null Hypothesis: H0: Population variances all equal.
+Test Statistic: L
+Null Distribution: Fg-1,N-g
+Decision Rule: Reject H0 if L > F(2,15,0.95) = 3.682
+Decision: L = 2.1961 < 3.682; hence, Fail to Reject H0
+Conclusion: Insufficient evidence in the data to indicate
+population variances are not all the same, or at least nearly the
+same (at significance level 0.05, p-Value ≈ 0.146).
+Raw Data
+Absolute Deviations from Median
+ANOVA for above
+Note that Fmax = SA
+2/SC2 = 3.182,
+which is less than the corresponding Table 12
+critical value for 3 groups, group size = 6, and
+α = 0.05 of 10.8. Hence, this result is consistent
+with the BFL test result.
+Sample Data From 3 or More Groups
+Workshop 1 Example: Research Hypothesis: H1: Population variances not all equal.
+Null Hypothesis: H0: Population variances all equal.
+Test Statistic: L
+Null Distribution: Fg-1,N-g
+Decision Rule: Reject H0 if L > F(3,46,0.95) = 2.807
+Decision: L = 8.893 > 2.807; hence, Reject H0
+Conclusion: The population variances are not all the same (at
+significance level 0.05, p-Value ≈ 0.000093).
+So, the σi
+2 are not all equal, but how are they different?
+There are several possible ways to handle this.
+Probably the most technically correct would be to compare all
+six possible ratios of pairs of Si using Bonferroni-type
+confidence intervals based on F-distributions.
+However, providing simple confidence intervals for each group
+might also suffice and be easier to communicate.
+0
+2
+4
+6
+8
+10
+12
+nm
+Shift Gate Width Standard Deviations
+95% Confidence Intervals
+A
+B
+C
+D
+The real concern is what if we are most interested in differences
+in group means? The standard ANOVA procedure assumes
+equal variances within groups, but if evidence to contrary, then …
+1) Could consider nonparametric approach
+2) Could “normalize” the data (eg, divide by Si within each group)
+3) Perhaps a transformation of some kind (eg, ln(y))
+Sample Data From 3 or More Groups
+MINITAB: Stat → ANOVA → One-Way (Unstacked)
+Comparisons button: Chose Tukey & Fisher
+Graphics button: Chose Box Plots & 3 in 1 Residual Plots
+Two-Way Analysis of Variance
+The Herbicide data was analyzed with what if referred to as a One-Way Analysis of Variance.
+It is only a One-Way analysis because the groups are only identified in a single way (ie, by the type
+of Herbicide used).
+Often, groups are identified in more than a single way. Consider, for example, the evaluation of
+Crop Yield for plots treated with different amounts of Nitrogen and Phosphorus:
+Note that each plot is now classified
+two ways: Amount of Nitrogen
+applied & Amount of Phosphorus
+applied.
+Now we have two factors or
+treatments to consider rather than
+just one.
+Note that the implied statistical model involved here is a little
+more involved than the One-Way ANOVA model.
+The model implied in the simple, balanced 2-way ANOVA
+situation present in this example is:
+Yijk = µ + αi + βj + εijk,
+with i = 1, …, a (the number of levels for Factor A),
+j = 1, …, b (the number of levels for Factor B),
+and k = 1, …, m (number of results for each group)
+where Yijk = the kth result from group (i, j),
+µ = an overall mean level for the data,
+αi = an offset for the mean level when Factor A = i
+from the overall mean
+βj = an offset for the mean level when Factor B = j
+from the overall mean (so µij = µ + αi + βj),
+εijk = random error term
+The assumptions for this model include Σi=1 to a αi = 0,
+Σj=1 to b βj = 0, and εijk ~ NID(0, σ2).
+Two-Way Analysis of Variance
+Research Hypothesis: H1: µij ≠ µi’j’, for some i ≠ i’ and/or j ≠ j’, i,i’ = 1,…,a, j,j’ = 1, …, b
+Null Hypothesis: H0: µij = µi’j’, for all i,i’ = 1,…,a and j,j’ = 1,…,b
+Test Statistics: FA = MSA/MSE & FB = MSB/MSE
+Provided data within groups are normally distributed & variances within groups are equal
+Null Distributions: F(a-1, abm-a-b+1) & F(b-1, abm-a-b+1) (where a=2 & b=2, the number of levels for Factors A &B, respectively)
+A formal hypothesis test is generally built around the relevant ANOVA Table.
+Source df SS MS F
+Factor A a-1 SSA =
+bm∑a(Yi-bar – Y-bar)2
+MSA =
+SSA/(a-1)
+FA =
+MSA/MSE
+Factor B b-1 SSB =
+am∑b(Yj-bar – Y-bar)2
+MSB =
+SSB/(b-1)
+FB =
+MSB/MSE
+Error abm-a-b+1 SSE =
+∑a∑b∑m(Yijk – Yi-bar – Yj-bar + Y-bar)2
+MSE =
+SSE/(abm-a-b+1)
+Total abm-1 TSS =
+∑a∑b∑m (Yijk – Y-bar)2
+ANOVA Table
+Decision Rule: With
+α = 0.05,
+Reject if either F
+statistic is larger than
+its corresponding 95th
+percentile point
+Decision: Reject H0 since both FA & FB > 6.608
+Conclusion: Application of Nitrogen and Phosphorus
+effects Crop Yield (p-Value < 0.00025)
+Could have single Test Statistic:
+FAll = [(SSA + SSB)/(a+b-2)]/MSE
+Null Distribution:
+FAll ~ F(a+b-2,abm-a-b+1)
+Decision Rule: Reject if
+FAll > F(a+b-2,abm-a-b+1,1-α)
+Decision: Reject since FAll = 161.75 > F(a+b-2,abm-a-b+1,0.95) = 5.786
+Conclusion: Same
+(p-Value = 0.000029)
+Two-Way Analysis of Variance
+Similar to most hypothesis tests, a reject decision provides a conclusion that leaves unanswered
+questions. For the Crop Yield data, the conclusion is that application of Nitrogen and Phosphorus
+impacts Crop Yield; however, it is not clear how they do so.
+Again, we resort to a suitable multiple comparison technique to compare the group averages.
+Note that intervals below are half-width confidence intervals so those that do not overlap suggest
+significant differences in corresponding population means.
+131.27
+151.77
+165.77
+187.27
+124.5
+145
+159
+180.5
+117.73
+138.23
+152.23
+173.73
+110
+120
+130
+140
+150
+160
+170
+180
+190
+P = 10 P = 10 P = 20 P = 20
+N =40 N =60 N = 40 N = 60
+Crop Yield (bu/ac)
+Plot Treatment
+Bonferroni Comparison Intervals
+High
+Avg Yield
+Low
+These intervals were obtained by first generating
+the actual Bonferroni confidence intervals for the
+difference between any two of the respective
+group means:
+(Yij-bar – Yi’j’-bar) ±
+t(abm-a-b+1, 1-α/[ab*(ab-1)])*sqrt(2MSE/m)
+Then take the half-width of these intervals (ie, the
+second row above divided by 2) and add and
+subtract it from each of the respective group
+means:
+Yij-bar ± (1/2)* t(abm-a-b+1, 1-α/(ab*[ab-1])*sqrt(2MSE/m)
+Note that this is ~70% (sqrt(2)/2) of the width of a
+Bonferroni confidence interval for μij alone.
+It appears Yield increases with application of both chemicals (~1bu/ac per 1lb N & ~3.5bu/ac per 1lb P).
+Two-Way Analysis of Variance
+Another type of plot often used in Analyses of Variance is the Profile Plot, especially when at least one
+of the group identifiers is continuous in nature. Both of these identifiers (Amt of N & Amt of P) are
+continuous in this case.
+180.5
+145
+159
+124.5
+110
+120
+130
+140
+150
+160
+170
+180
+190
+5 10 15 20 25
+Crop Yield (bu/ac)
+Phosphorus (lb)
+Profile Plot
+N =60
+N =40
+Note that this plot displays the effect of
+applying additional Phosphorus (P) for
+each specific application of Nitrogen (N).
+The form of the relationship between
+Crop Yield and Phosphorus is depicted as
+linear in nature since only two levels of
+Phosphorous application were evaluated.
+The lines being virtually parallel is an
+indication that the purely additive two-
+way model evaluated is appropriate.
+However, what happens if we arbitrarily
+subtract 60 bu/ac Yield from the
+observed values for the plots receiving 60
+lbs of Nitrogen and 20 lbs of Phosphorus?
+120.5
+145
+159
+124.5
+110
+120
+130
+140
+150
+160
+170
+180
+190
+5 10 15 20 25
+Crop Yield (bu/ac)
+Phosphorus (lb)
+Profile Plot
+N =60
+N =40
+Clearly, the profile plot changes significantly.
+What about the ANOVA?
+Two-Way Analysis of Variance
+Data Analysis of Variance Table
+164.43
+184.93
+198.93
+160.43
+124.5
+145
+159
+120.5
+84.57
+105.07
+119.07
+80.57
+80
+100
+120
+140
+160
+180
+200
+P = 10 P = 10 P = 20 P = 20
+N =40 N =60 N = 40 N = 60
+Crop Yield (bu/ac)
+Plot Treatment
+Bonferroni Comparison Intervals
+High
+Avg Yield
+Low
+What happened?!?
+Nothing appears significant any
+longer,
+1) Both F statistics are < 1, with
+p-Values > 0.5,
+2) All multiple comparison intervals
+overlap, and
+3) The MSE ~35X larger than before
+(which is the root of the problem),
+but we did not change the within
+group variation at all!
+Two-Way Analysis of Variance
+The problem here is that the simple two-way model, which is purely additive in nature is
+no longer appropriate. The departure from parallel for the lines in the Profile Plot indicate
+the need for a multiplicative term in the model. This is the role of what is called the
+Interaction term which needs to be added to the original simple additive model.
+The new, and more general two-way, balanced ANOVA model including Interaction is:
+Yijk = µ + αi + βj + αβij + εijk,
+with i = 1, …, a (the number of levels for Factor A),
+j = 1, …, b (the number of levels for Factor B),
+and k = 1, …, m (number of results for each group)
+where Yijk = the kth result from group (i, j),
+µ = an overall mean level for the data,
+αi = an offset for the mean level when Factor A = i from the overall mean
+βj = an offset for the mean level when Factor B = j from the overall mean
+αβij = a multiplicative effect for Factors A and B for group (i, j) (so, now µij = µ+αi+βj+αβij),
+εijk = random error term
+The assumptions for this model include Σi=1 to a αi = 0, Σj=1 to b βj = 0, Σi=1 to aΣj=1 to b αβij = 0,
+and εijk ~ NID(0, σ2).
+Two-Way Analysis of Variance
+The New ANOVA Table including the accounting for Interaction is given as:
+Source df SS MS F
+Factor A a-1 SSA =
+bm∑a(Yi-bar – Y-bar)2
+MSA =
+SSA/(a-1)
+FA =
+MSA/MSE
+Factor B b-1 SSB =
+am∑b(Yj-bar – Y-bar)2
+MSB =
+SSB/(b-1)
+FB =
+MSB/MSE
+Interaction (a-1)(b-1) SSAB =
+m∑a∑b(Yij-bar – Yi-bar – Yj-bar + Y-bar)2
+MSAB =
+SSAB/[(a-1)(b-1)]
+FAB =
+MSAB/MSE
+Error ab(m-1) SSE =
+∑a∑b∑m(Yijk – Yij-bar)2
+MSE =
+SSE/[ab(m-1)]
+Total abm-1 TSS =
+∑a∑b∑m (Yijk – Y-bar)2
+The Error df and
+SS are separated
+into two parts,
+one of which
+captures the
+effect of the
+Interaction
+element of the
+model.
+Note that testing in mutli-way ANOVA situations proceeds
+with evaluation of the highest order interaction.
+If it is significant, indicating a multiplicative aspect to the
+model, then the main effects associated with this
+interaction are not evaluated, but are considered
+necessary to properly support the significant interaction.
+Two-Way Analysis of Variance
+133.16
+153.66
+167.66
+129.16
+124.5
+145
+159
+120.5
+115.84
+136.34
+150.34
+111.84
+80
+100
+120
+140
+160
+180
+200
+P = 10 P = 10 P = 20 P = 20
+N =40 N =60 N = 40 N = 60
+Crop Yield (bu/ac)
+Plot Treatment
+Bonferroni Comparison Intervals
+High
+Avg Yield
+Low
+120.5
+145
+159
+124.5
+110
+120
+130
+140
+150
+160
+170
+180
+190
+5 10 15 20 25
+Crop Yield (bu/ac)
+Phosphorus (lb)
+Profile Plot
+N =60
+N =40
+Bonferroni comparisons indicate a significant
+difference between the plots with both N and P
+at their lowest & highest values and the plots
+where one is high and the other low.
+The profile plot was the origin of this evaluation
+of interaction, which is highly significant here
+since the profiles actually trend in different
+directions. However, any departure from parallel
+suggests the potential for significant interaction
+to be involved.
+Two-Way Analysis of Variance
+MINITAB: Stat → ANOVA → Two-Way Rows: Nitrogen, Columns: Phosphorus
+Graphs button: Chose 4 in 1 & Box Plots
+NOTE: Two-Way automatically includes an Interaction Effect in the Analysis
+Two-Way Analysis of Variance
+MINITAB: Stat → ANOVA → General Linear Model Response: Crop Yield
+Model: Nitrogen Phosphorus
+Factor Plots button: Chose Main Effects (N & P)
+STAT 5340
+Statistical Analysis I
+Introduction
+In God we trust, all others bring data.
+There are lies, damned lies, and statistics.
+Statistics are like a string bikini, what they reveal can be
+very interesting, but what they hide is often essential.
+Observed
+Data Value
+=
+Actual
+Value +
+Measurement
+Error
+What we See, What is
+“Revealed”, the “Lie”
+What we Want to Know,
+What is “Essential”
+Nuisance, But Real
+- Sampling Errors
+- Bias Errors
+- Measurement Approach
+Variation Errors
+- Blunders
+Population
+Sample
+Population is the group of individuals,
+objects, or events that we want to
+know something about
+- All U.S. Citizens
+- All Product from a Specific Manufacturing Line
+- All Customer Complaints about a Specific Service
+Sample is a subset of the Population,
+and is comprised of the individuals,
+objects, or events we can observe
+- A poll of U.S. Citizens
+- Product from a Specific Lot
+- Complaints from a Specific Time Period
+Variable is a Characteristic of Interest,
+Generally can be Measured for any
+Item in the Population or Sample
+- Voting Preference/Intent
+- A Specific Quality Characteristic (eg, Size, Strength, etc)
+- Specific Nature of a Complaint
+Types of
+Variables
+Other
+Descriptors
+Additional
+Breakdown Examples
+Qualitative Attribute,
+Categorical
+Nominal
+(No Inherent Order)
+Demographic - Race, Gender, Religion, etc
+Political Affiliations, Job Types, etc
+Ordinal
+(Inherent Order)
+Non-numerical Ratings (eg, Good, OK, Bad)
+Age Groupings (eg, Under 21, 21-40, Over 40)
+Quantitative Numerical
+Discrete
+(Finite Number of
+Possible Results)
+Counts (eg, Particles, Defects, etc)
+Numerical Ratings (eg, 1 to 10 integers only)
+Continuous
+(Theoretically Infinite
+Results Possible)
+Measured Values (eg, Distance, Weight, etc)
+Time
+More Information is Carried in the
+Data as we go Down the Table, So
+“Best” Data is Quantitative, Continuous,
+Which is the Type we will Use Most
+Population
+Sample
+Variable is a Characteristic of Interest,
+Generally can be Measured for any
+Item in the Population or Sample
+- Voting Preference/Intent
+- A Specific Quality Characteristic (eg, Size, Strength, etc)
+- Specific Nature of a Complaint
+Data Value is a quantity or description
+associated with a specific Variable for
+One element of the Population or Sample
+- Democrat
+- 0.011 microns
+- Lost luggage
+Data is the group of Data Values for a specific
+Variable for the items in the Sample
+Generic Party Microns Complaint
+x1 Democrat 0.014 Poor In-Flight Service
+x2 Republican 0.015 Late Flight
+x3 Republican 0.006 Late Flight
+x4 Democrat 0.012 Late Flight
+Population
+Sample
+Data is the group of Data Values for a specific
+Variable for the items in the Sample
+Generic Party Microns Complaint
+x1 Democrat 0.014 Poor In-Flight Service
+x2 Republican 0.015 Late Flight
+x3 Republican 0.006 Late Flight
+x4 Democrat 0.012 Late Flight
+x5 Other 0.010 Late Flight
+x6 Republican 0.007 Late Flight
+x7 Republican 0.015 Late Flight
+x8 Democrat 0.003 Poor In-Flight Service
+x9 Democrat 0.014 Late Flight
+x10 Democrat 0.006 Late Flight
+x11 Democrat 0.014 Lost Luggage
+x12 Republican 0.014 Lost Luggage
+x13 Democrat 0.010 Lost Luggage
+x14 Democrat 0.016 Poor In-Flight Service
+x15 Democrat 0.012 Poor In-Flight Service
+x16 Democrat 0.015 Late Flight
+x17 Democrat 0.014 Late Flight
+x18 Democrat 0.012 Other
+x19 Republican 0.015 Late Flight
+x20 Democrat 0.011 Late Flight
+Statistic is a numerical value summarizing the Sample Data
+Party Number Percent
+Democrat 13 65.0%
+Republican 6 30.0%
+Other 1 5.0%
+All 20 100.0%
+Statistic Microns
+Average 0.0118
+Std Dev 0.0037
+Complaint Number Percent
+Late Flight 12 60.0%
+Lost Luggage 3 15.0%
+Poor In-Flight Service 4 20.0%
+Other 1 5.0%
+All 20 100.0%
+But Are the Statistics
+What we Want to Know?
+Population
+Sample
+Statistic is a numerical value summarizing the Sample Data
+Party Number Percent
+Democrat 13 65.0%
+Republican 6 30.0%
+Other 1 5.0%
+All 20 100.0%
+Statistic Microns
+Average 0.0118
+Std Dev 0.0037
+Complaint Number Percent
+Late Flight 12 60.0%
+Lost Luggage 3 15.0%
+Poor In-Flight Service 4 20.0%
+Other 1 5.0%
+All 20 100.0%
+Parameter is a corresponding numerical value
+summarizing the Population Data
+Parameters are generally what we want to know,
+But Statistics are all we generally have available
+Sample Statistics Population Parameters
+Party Percent
+Democrat 52.0%
+Republican 43.2%
+Other 4.8%
+All 100.0%
+Complaint Percent
+Late Flight 60.0%
+Lost Luggage 15.0%
+Poor In-Flight Service 20.0%
+Other 5.0%
+All 100.0%
+Differences Between Sample Statistics
+and Population Parameters are
+Sampling Errors
+Inferential Statistics is using the
+Descriptive Statistics of the Sample to
+Draw Conclusions about the Population
+Sampling Methods
+Data Collection Approaches
+1) Define the Objective
+2) Define the Population &
+Variable(s) of Interest
+3) Define the Data Collection &
+Measurement Approaches
+4) Collect the Sample Data
+5) Review the Process vs the Plan
+Data Collection Process
+1) Keep it Manageable
+2) Most Frequent Error is
+Attempting to Do Too Much
+3) Still Strive for Representative
+Sample & Keep Analysis in Mind –
+Obtain Most Informative Data
+Reasonably Possible
+4) Take care in Data Collection –
+Avoid Blunders
+5) Review Process to Improve Future
+Efforts
+Some Guidelines
+Sample Type Stages Sample Name
+Probability
+Mutli
+Proportional Stratified
+Stratified Random
+Cluster
+Multi-Stage Random
+Single Simple Random
+Systematic
+Non-Probability Single
+Judgment
+Volunteer
+Convenience
+Common Sampling Methods
+Some Observations
+• Sampling is Generally Driven by the Budget
+• Sampling Approach should consider the Objective
+• Compromises in Sampling can Increase Likelihood of
+Non-Representative Samples
+• Going Down Table Above, Generally
+• Less Expensive
+• Less Information Required Up Front
+• More Chance for Non-Representative Samples
+• Bias Errors are the Likely Result of Non-
+Representative Samples
+Election Polling
+In 1936, Literary Digest ran their
+by then traditional presidential
+election poll of more than10
+million Americans.
+Similar polls they had run
+correctly predicted the outcome
+each time they had been
+conducted – 1916, 1920, 1924,
+1928, and 1932.
+Their results are displayed at
+right and effectively predict a
+landslide for the Republican
+candidate Alf Landon.
+- 57% of the voters
+- 370 Electoral College votes
+http://uselectionatlas.org/RESULTS/national.php?year=1936
+Election Polling
+So what was the outcome?
+Roosevelt won, but was it
+at least close?
+- Well, no
+Roosevelt won >60% of
+the vote and all but two
+states (ie, 523 of the 531
+Electoral College votes)
+So what happened?
+Sample Bias Error
+- Self-selected sample
+- Bias in mailings
+http://en.wikipedia.org/wiki/List_of_countries_by_infant_mortality_rate
+Infant Mortality Data
+So where does the US rank
+among the most populous
+countries in the world in
+terms of Infant Mortality Rate
+(deaths/1000 live births)?
+- Lowest Rate (Rank 1)
+- Lowest Five (Ranks 2-5)
+- Lowest Ten (Ranks 6-10)
+- Outside Lowest Ten (Ranks > 10)
+- Over/Under 20?
+Here's a general overview for you. When you compare infant mortality
+statistics you need to look for the definitions. What, for instance,
+constitutes a live birth? In the United States any infant exhibiting any
+sign of life is considered to be alive. It doesn't matter how small, how
+premature or how much it weights. In countries like France, the
+Netherlands and Ireland they don't count the birth as a live birth unless
+the infant weighs more than 500 grams or the mother was at least 22
+[weeks] along in the pregnancy. Other countries won't count the birth as
+being a live birth unless the infant survives for a specified period of time.
+http://boortz.com/nealz_nuze/2009/11/those-phony-infant-mortality-s.html
+So measurement approach is relevant, and differences in approach
+(ie, Measurement Errors) will work to hide the actual information that
+is really of interest.
+Measurement Errors
+Measurement Accuracy = No Bias Errors = Well-Calibrated Device
+Measurement Precision = Good Repeatability & Reproducibility
+Virtually Always Present in Quantitative, Continuous Data – Gauge Studies
+Can be Present in Survey Data – Same Question Phrased Slightly Differently
+Signal + Noise Model
+Observed
+Data Value
+=
+Actual
+Value +
+Measurement
+Error
+What we See, What is
+“Revealed”, the “Lie”
+What we Want to Know,
+What is “Essential”
+Nuisance, But Real
+- Sampling Errors
+- Bias Errors
+- Measurement Approach
+Variation Errors
+- Blunders
+The Basic Statistical Model reflected above is:
+Yi = μ + εi
+Observed
+Data Value
+Signal =
+Parameter
+We Really
+Want to
+Know
+Noise =
+Errors due to
+Sampling, Bias,
+Measurement,
+Mistakes, etc.
+How much of what is Observed is Signal and how much is Noise?
+Probability and Statistics
+- Probability attempts to evaluate the chance that specific events will occur
+given knowledge of a Population
+- Statistics attempts to evaluate what a Population looks like
+given the occurrence of an event (ie, a Sample)
+Population
+Sample
+Probability Statistics
+STAT 5340
+Statistical Analysis I
+Probability
+Terminology
+A SAMPLE SPACE is a well-defined collection of items, eg, people places, things, objects,
+numbers, etc. “Well-defined” implies that membership in a given set or not is clear, obvious.
+Examples: All U.S. citizens of voting age
+All product produced from a specific manufacturing line
+All complaints made about airline travel
+An EVENT is a collection of items that all belong to a given SAMPLE SPACE.
+Examples: U.S. citizens of voting age that provided responses to a specific opinion poll
+Lots of product sampled for specific evaluation from a specific manufacturing line
+Complaints made about airline travel over a specific time frame
+A SAMPLE POINT is a specific Item in a SAMPLE SPACE.
+Examples: A specific U.S. citizen of voting age
+A specific lot of production from a specific manufacturing line
+A specific complaint made about airline travel
+Probability
+Classical Definition
+If a SAMPLE SPACE is comprised of N SAMPLE POINTS {si}, each of which
+is equally likely to occur, be observed, or comprise an EVENT, then the
+Probability of any individual SAMPLE POINT = P[si] = 1/N, for i = 1 to N
+If an EVENT, A, is comprised of M equally likely SAMPLE POINTS from a
+SAMPLE SPACE of N (>= M) equally likely SAMPLE POINTS, then
+Probability of EVENT A = P[A] = M/N.
+This is the Classical concept of Probability, which largely arose from the study
+of games of chance (ie, those involving coins, dice, and cards)
+Probability
+Relative Frequency Definition
+Another approach to determining probabilities is the
+Relative Frequency concept.
+This approach suggests that if we repeat a data
+acquisition activity (eg, an experiment, a survey, etc) a
+large number of times and each time observe when an
+event of interest (eg, A) occurs, say NA, then with a
+sufficiently large number of repeats, say N
+P[A] ≈ NA/N
+Consider the activity of rolling 12 fair dice with the event of
+interest (ie, A) being observing at least two “6” results
+among the 12 dice.
+Now imagine repeating this activity N=100 times and
+counting how many of the 100 rolls satisfy event A (ie, NA).
+At each roll, r = 1, 2, …, 100, we could calculate the relative
+frequency of event A as NA(r)/r, and plot the ordered pairs
+(r, NA(r)/r).
+The resultant plot should converge on P[A].
+In this sequence,
+62 of 100 rolls
+produced at least
+two “6” results , so
+P[A] ≈ 0.62.
+Exact Probability
+Can be Calculated,
+And P[A] = 0.618667
+For this activity, the exact P[A] can be obtained, and with 100 repeats, we got as close as possible
+with our Relative Frequency estimate.
+Probability
+Definition
+The Probability of an Event equals the number of Items in the Event (either
+calculated or observed) divided by the number of Items in the Sample Space
+(ie, P[A] = n(A) / n(S) ).
+Example: Rolling a pair of dice
+Event: Roll Doubles (ie, same
+number on both die)
+n(Doubles) = 6, n(S) = 36
+P[Doubles] = 6/36 = 1/6
+Event: Sum of Die = 9
+n(Sum=9) = 4, n(S) = 36
+P[Sum=9] = 4/36 = 1/9
+Sample Space
+So … Probability is 2 Counting Results and a Division Step
+1) Count the number of items in the Sample Space – n(S)
+2) Count the number of items in the Event – n(A)
+3) Divide the result in 2) by that in 1) – P[A] = n(A)/n(S)
+Probability
+Example – Birthdays
+There are approximately 30 people in a general undergrad class, what do think the
+probability is that there are at least 2 people with the same birth date (not
+necessarily year) in the class?
+1) Count the number in the Sample Space (assume no 2/29 birthdays)
+How many possible birth dates for 1st person?
+How many for 2nd person?
+…
+How many for 30th person?
+365
+365
+365
+So, the number of
+possible lists of
+birth dates for n = 30
+people is n(S) = 36530
+2) Count the number in the Event (at least 1 matched set of birth dates)
+(Easier to count number with NO matches and subtract from above)
+How many possible birth dates for 1st person?
+How many for 2nd person?
+…
+How many for 30th person?
+365
+364
+336
+So, the number of
+possible lists of
+birth dates for n = 30
+people with at least 1
+match is n(A) =
+36530 – P(365, 30)
+3) Divide result in 2) by that for 1)
+P[>=1 match] = [36530 – P(365, 30)] / 36530
+= 1 – 0.294
+= ~0.706
+So, about a 7 in 10 chance
+that there will be at least
+one match in the room
+Probability
+Example – Birthdays
+0.027
+0.117
+0.253
+0.411
+0.569
+0.706
+0.814
+0.891
+0.970 0.994 0.999 0.999914 0.9999997
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+0 20 40 60 80 100
+P{>=1 Match]
+Number of People
+Birthday Problem
+Probability of at least one match
+in a group of 23 people is about
+50%.
+In a group of 100 people, it is
+a virtual certainty that at least
+two people will share the same
+birth date.
+If my wife and I are both in the
+room, then it is a certainty that
+at least two people will share
+the same birth date, because
+we do … which is great for me,
+as I never forget her birthday. ☺
+Sets
+A SET is a well-defined collection of items, eg, people places, things, objects, numbers, etc.
+“Well-defined” implies that membership in a given set or not is clear, obvious.
+Examples: All U.S. citizens of voting age
+All product produced from a specific manufacturing line
+All complaints made about airline travel
+A SUBSET is a collection of items that all belong to a given SET.
+Examples: U.S. citizens of voting age that provided responses to a specific opinion poll
+Lots of product sampled for specific evaluation from a specific manufacturing line
+Complaints made about airline travel over a specific time frame
+Every SET is a SUBSET of itself, and the EMPTY SET (ie, the set with no items) is a SUBSET of every SET
+Two SETs are EQUAL if and only if they contain exactly the same items
+Sets
+Venn Diagrams
+A
+U
+B
+The Rectangle represents the Universal
+Set = Set of All (“Relevant”) Items
+Set A and Set B share some common
+Items, but are not Subsets of each other
+A, B
+U
+A = B
+A
+U
+B
+B is Subset
+of A
+A
+U
+B
+A and B
+Mutually
+Exclusive
+Sets (No
+Common
+Items)
+Sets
+Set Operations
+INTERSECTION
+A ∩ B = A and B
+The Set of All Items in Both Set A and Set B
+A
+U
+COMPLEMENT
+A’ = not A
+The Set of All Items in the Universal Set, U,
+But Not in A
+A
+U
+B
+UNION
+A U B = A or B
+The Set of All Items in Set A, in Set B or in Both
+Sets A and B
+A
+U
+B
+Probability
+Rules of Probability
+Rule 1: A probability is always a number between 0 and 1, inclusive.
+0 <= P[Any Event] <= 1
+Note: Usually, probabilities are expressed in decimal form,
+but can also be expressed as percentages, eg 1 = 100%
+Note: P[A] = 0 indicates outcome A can not occur
+Note: P[A] = 1 indicates outcome A is the only possible outcome,
+and always occurs
+Rule 2: The sum of probabilities for all possible outcomes is equal to one.
+Sum( All P[Ai] ) = 1
+Rule 3 (Law of Large Numbers): If an experiment is repeated many times,
+the empirically observed probability of a given outcome will tend to
+approach the theoretical probability of that outcome for a single
+experimental trial.
+NOTE: Here Ai is a partitioning of the entire Sample Space so that all Ai are mutually
+exclusive of each other
+Probability
+Rules - Example
+Rule 1: All P[A] between 0 and 1
+Rule 2: Sum of P[A] for All Outcomes = 1
+Rule 3: P’[7] Observed approaches
+P[7] Expected with Repeated Throws
+Probability
+Complementary and Mutually Exclusive Events
+The Complement of Event A is the Event “Not A”
+P[Not A] = P[A’] = 1 – P[A]
+A
+Not A
+Mutually Exclusive Events, A and B, are Events that Can NOT Occur
+Simultaneously
+P[A and B] = P[A ∩ B] = 0
+The Complement of an
+Event is All Area Outside
+The Circle for that Event,
+But Still within the Venn
+Diagram
+A B
+Mutually exclusive Events
+Have no Overlapping Area
+within the Venn Diagram
+NOTE: A and Not A are mutually exclusive
+If A & B are mutually exclusive, then
+P[A or B] = P[A U B] = P[A] + P[B]
+Probability
+“Additive Rule”
+P[A or B] = P[A U B] = Probability that either A alone, B alone, or both A and B occur
+= P[A] + P[B] – P[A ∩ B]
+= P[A] + P[B] – P[A and B]
+If A & B are Mutually Exclusive Events, then
+P[A or B] = P[A U B] = Probability that A alone, B alone, or both A & B occur
+= P[A] + P[B]
+B
+A A or B
+Event A or B is area
+including both Circles
+in Venn Diagram
+Event A or B includes all
+the Area included by both
+Circles in Venn Diagram
+NOTE: P[A] includes all of A, and P[B] includes
+all of B, so P[A & B] added in twice in
+P[A] + P[B], so needs to be subtracted
+out once; hence, the formula above
+A B
+NOTE: This is the same as the result above
+since for Mutually Exclusive events
+P[A & B] = P[A ∩ B] = 0.
+Probability
+“Conditional Probability”
+P[A | B] = Probability that event A occurs given that event B has occurred
+= P[A and B] / P[B], or
+= P[A ∩ B] / P[B]
+A B
+Event A | B is where
+Circles Overlap
+Restricted to the
+Circle B
+NOTE: P[B] ≠ 0
+A & B
+A A & B
+P[B | A] = Probability that event B occurs given that event A has occurred
+= P[A and B] / P[A], or
+= P[A ∩ B] / P[A]
+NOTE: P[A] ≠ 0
+Event B | A is where
+Circles Overlap
+Restricted to the
+Circle A
+Conditional Probability
+Cancer
+Smokes
+.06 .03
+.15
+.76
+Consider the following information:
+9% of Individuals get Cancer
+21% of Individuals Smoke
+76% of Individuals Neither Smoke nor
+get Cancer
+What is the probability someone who
+smokes will get cancer?
+Now answer is straightforward:
+P[Cancer|Smokes] = .06/.21 ≈ 0.286
+What is the probability someone who
+has cancer smokes?
+P[Smokes|Cancer] = .06/.09 ≈ 0.667
+Smoke & Get Cancer
+Get Cancer, but
+Did Not Smoke
+Smoke, but
+Do Not Get Cancer
+Did Not Smoke &
+Cancer Free
+Cancer
+Smokes Yes No Total
+Yes
+No
+Total 1
+.09
+.21
+.76 .79
+.91
+.03
+.06 .15
+Conditional Probability
+Let C1, C2, …, Ck be mutually exclusive, but exhaustive events (ie, a partition) of sample space C,
+with P[Ci] > 0, for all i = 1, 2, …, k. Note these events do not need to be equally likely.
+Let C be another event in C, then
+C = C ∩ (C1 U C2 U … U Ck) = (C ∩ C1) U (C ∩ C2) U … U (C ∩ Ck)
+and, since C ∩ Ci, i = 1, 2, …, k are all mutually exclusive,
+P[C] = P[(C ∩ C1)] + P[(C ∩ C2)] + … + P[(C ∩ Ck)].
+However, P[(C ∩ Ci)] = P[Ci]*P[C|Ci], i = 1, 2, …, k; so
+P[C] = P[C1]*P[C|C1] + P[C2]*P[C|C2] + … + P[Ck]*P[C|Ck]
+= ∑i = 1 to k{P[Ci]*P[C|Ci]},
+which is often recognized as the law of total probability.
+C1
+C2
+C3
+C4
+C5
+C6
+C7
+C8
+C9
+C
+When P[C] > 0, from the definition of conditional probability, and using the law of total probability:
+P[Cj | C] = P[(Cj ∩ C)]/P[C] = P[Cj]*P[C | Cj]/(∑i = 1 to k{P[Ci]*P[C|Ci]}),
+which is the well-known Bayes’ Theorem.
+Conditional Probability
+Example – Let’s Make a Deal
+Premise: 3 Hidden Doors, Behind One is a Prize (Chosen Randomly)
+Choice 1: Choose a Door at Random
+Information: Of the Two Doors Not Selected, One w/o Prize is Identified
+Choice 2: Stay with First Choice, or Change to Remaining Hidden Door
+What Choice 2 Strategy Maximizes Chances of Getting Prize?
+• Always Stay with Initial Choice
+• Always Change to Other Door
+• Flip a Coin to Choose (Heads = Stay, Tails = Change)
+Choice 1
+Right
+Door
+Wrong
+Door
+PR2|W1
+PW2|W1
+Right
+Door
+Wrong
+Door
+PR2|R1
+PW2|R1
+Right
+Door
+Wrong
+Door
+PR1 = 1/3
+PW1 = 2/3
+Choice 2 P[Win Prize] = P[Right Door]
+= P[R1 and R2] + P[W1 and R2]
+= P[R1] * P[R2|R1] + P[W1] * P[R2|W1]
+Strategy of Always Changing to Other Door
+Maximizes Chances of Winning the Prize
+Strategy
+Probabilities
+R2| R1 W2|R1 R2|W1 W2|W1 R1 & R2 W1 & R2 WIN
+STAY
+CHANGE
+FLIP COIN
+1 0 0 1 1/3 0 1/3
+0 1 1 0 0 2/3 2/3
+1/2 1/2 1/2 1/2 1/6 1/3 1/2
+Conditional Probability
+Example
+Situation:
+A cab sideswipes a car late on a winter night.
+A witness testifies that he saw a Blue cab commit the offense.
+There are only two cab companies in town: Blue and Green.
+Green has 85% of the cabs on the road, Blue the remaining 15%.
+Independent studies indicate that the witness will be correct 80% of the time.
+Question:
+What is the probability the offending cab was indeed Blue given the
+Testimony of the witness that it was Blue?
+P[Cab was Blue | Testimony is Blue] =
+P[Cab was Blue & Testimony is Blue] / P[Testimony is Blue] =
+.12 / .29 = .4138
+Actually, More Likely cab was Green, even with Testimony that it was Blue
+Cab was …
+Testimony is …
+Blue Green All
+Blue
+Not Blue
+All
+What do we know?
+P[Cab was Blue] = .15 and P[Cab was Green] = .85
+What do we want to know?
+P[Cab was Blue | Testimony is Blue] = 0.8?
+What is 0.8?
+P[Testimony is Blue | Cab was Blue] = 0.8 0.15 0.85 1
+P[Cab was Blue & Testimony is Blue ] =
+P[Cab was Blue] * P[Testimony is Blue | Cab was Blue] =
+.15 * .80 = .12
+0.12
+0.03
+P[Cab was Green & Testimony is Blue ] =
+P[Cab was Green] * P[Testimony is Blue | Cab was Green] =
+.85 * .20 = .17
+0.17 0.29
+0.68 0.71
+Probability
+Independent Events
+Two events, C1 and C2, are independent if the occurrence (or nonoccurrence) of
+one gives no information about the likeliness of occurrence for the other.
+P[C2] = P[C2|C1] = P[C2|C1C]
+Queen
+Heart
+12/52
+3/52 1/52
+36/52
+Consider Drawing a Single Card
+From a Well-Shuffled Card Deck
+Let Q = Card is a Queen
+Let H = Card is a Heart
+P[Q] =
+P[Q|H] =
+P[Q|Not H] =
+P[H] =
+P[H|Q] =
+P[H|Not Q] =
+Hence, Q and H are Independent
+NOTE: If events C1 and C2 are Independent, then P[C1 ∩ C2] = P[C1] * P[C2]
+P[Q & H] = P[Q] * P[H] = 1/13 * 1/4 = 1/52
+4/52 = 1/13
+1/13
+3/39 = 1/13
+13/52 = 1/4
+1/4
+12/48 = 1/4
+Probability
+Independent Events
+C1
+C2
+Question: Are C1 and C2 Independent? Mutually Exclusive events with
+positive probability are always
+dependent. Why?
+P[C2|C1] = 0 ≠ P[C2]
+If you know one event occurred,
+then you know the other did not
+– that is a large amount of
+information, and recall that the
+definition of independent events
+is knowledge of one event
+provides no information about
+the other.
+Mutually Independent Events C1, C2, …, Ck implies for every collection of n events (2 ≤ n ≤ k):
+P[ Cd1 ∩ Cd2 ∩ … ∩ Cdn ] = P[Cd1] * P[Cd2] * … * P[Cdn]
+with {d1, d2, …, dn} being n distinct integers from 1, 2, …, k.
+Probability
+Summary
+Work very carefully with the information given and the definitions of
+the concepts involved.
+Where possible, try to draw a picture of the situation described in
+the problem (eg, a Venn Diagram, a Tree Diagram, a Table etc).
+Often a first “off-the-top” response to a probability question turns
+out to be incorrect.
+Use the knowledge you have of
+• Rules of Probability (eg, all between 0 & 1, sum of all possibilities = 1)
+• P[A or B] = P[A] + P[B] – P[A & B]
+• P[A & B] = P[A] * P[B|A] = P[B] * P[A|B]
+• P[Not A] = 1 – P[A]
+• P[A | B] = P[A & B] / P[B] and P[B | A] = P[A & B] / P[A] for P[B]>0, P[A]>0
+• If A & B Mutually Exclusive, P[A & B] = 0 and P[A or B] = P[A] + P[B]
+• If A & B Independent, P[A] = P[A|B] = P[A|Not B] & P[B] = P[B|A] = P[B|Not A]
+• If A & B Independent, P[ A & B] = P[A] * P[B]
+Statistical Analysis I
+Statistical Models, Sampling Distributions,
+and Basic Inference Procedures
+Statistical Models
+“All models are wrong ,
+but some are more useful than others.” - George Box
+One model that has proved “useful” for many years to describe outcomes Xi, i = 1, …, n
+of random processes is given as
+Xi = μ + єi,
+where μ = an expected value or mean value for each Xi, and
+єi = a random deviation from this mean value for each Xi, i = 1, …, n.
+What makes the model “statistical” is the use of a distributional model for the random
+deviations єi.
+Far and away the most commonly applied distributional model is the Normal distribution,
+including the assumptions of
+1) a mean (expected value) of zero for each of the deviations,
+2) a common amount of variation for each of the deviations, and
+3) mutual independence among the deviations, denoted as
+єi ~ NID(0, σ2), where σ2 = Var(єi), i = 1, …, n.
+Normal Probability Density Function
+f(x) =
+1
+2𝜋𝜎
+𝑒−(𝑥− 𝜇)2
+2𝜎2
+-6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6
+Standard Deviations
+Normal Distribution
+68%
+95%
+99.7%
+P[a < x < b] = a∫b f(x) dx
+Mean = µ
+Standard Deviation = σ
+Note: As with all distributions, total area under the curve = 1
+Standard Normal Distribution
+A Standard Normal Distribution is when
+the mean µ=0 and
+the standard deviation σ=1
+Properties of the Standard Normal Distribution
+1. The total area under the curve is equal to 1
+2. The distribution is “bell-shaped”
+1. Symmetrical
+2. Mounded (Unimodal)
+3. Extends infinitely in both directions
+3. Has Mean = 0 and Standard Deviation = 1
+4. The Mean divides the area under the curve in half
+1. 0.5 Below the Mean
+2. 0.5 Above the Mean
+5. Nearly All the area (99.7% = 0.9970) lies between
+1. a = -3 and
+2. b = +3
+6. The probability of any specific value is Zero (ie, P[x=a] = 0)
+-6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6
+Standard Deviations
+Normal Distribution
+68%
+95%
+99.7%
+Normal Distributions
+Any Normal Distribution can be Converted to a Standard Normal Distribution by
+- Subtracting its Mean from the Value(s) of Interest, and then
+- Dividing this by its Standard Deviation
+- This is commonly referred to as generating a “Z-score”
+Consider the information that the Heights of Kindergarten children (ie, X) is
+Normally distributed with a Mean = 39 inches, and a Standard Deviation = 2 inches
+In order to find the Probability an Individual Kindergartener will be between
+38 and 40 inches tall, we would convert these values to their Z-scores:
+X = 38 => Z = (38-39)/2 = -1/2 and X = 40 => Z = (40-39)/2 = 1/2, and then
+Compute the desired probability using the Standard Normal Distribution result
+For the P[38 < X < 40] = P[-1/2 < Z < 1/2] = 0.3829
+By using the following Excel commands:
+=NORMSDIST(0.5) – NORMSDIST(-0.5)
+No need to convert to z-scores if you use the following Excel commands:
+=NORMDIST(40,39,2,TRUE) – NORMDIST(38,39,2,TRUE)
+OR
+OR
+This can be done using a table OR
+R command: pnorm(0.5) – pnorm(-0.5)
+R command: pnorm(40,39,2) – pnorm(38,39,2)
+Normal Distributions
+Or we could just use an Excel Utility:
+Input Information
+Mean 39 No Entry wi l l Defa ul t to 0
+Standard
+Deviation 2 No Entry or Non-pos i ti ve Entry wi l l Defa ul t to 1
+Data Value 38 OR Probability Wi l l Defa ul t to Da ta Va l ue i f Both Entered
+Optional Additional Note: Any entered Proba bi l i ti es MUST be between 0 a nd 1, EXCLUSIVE
+Data Value 40 OR Probability Wi l l Defa ul t to Da ta Va l ue i f Both Entered
+Output Results
+Area Data Value Probability
+Below 38 0.3085
+Above 40 0.3085
+Between 38 & 40 0.3829
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+32
+32.392
+32.784
+33.176
+33.568
+33.96
+34.352
+34.744
+35.136
+35.528
+35.92
+36.312
+36.704
+37.096
+37.488
+37.88
+38.272
+38.664
+39.056
+39.448
+39.84
+40.232
+40.624
+41.016
+41.408
+41.8
+42.192
+42.584
+42.976
+43.368
+43.76
+44.152
+44.544
+44.936
+45.328
+45.72
+Normal Distribution
+0.3085375 0.3085375
+Normal Distributions
+This Utility can also be used to answer such questions as:
+What Height would we only expect 5% of Kindergartners to exceed?
+In other words, to find x0 where P[ X < x0] = P[ Z < (x0 – μ)/σ] = 0.95.
+Input Information
+Mean 39 No Entry wi l l Defa ul t to 0
+Standard
+Deviation 2 No Entry or Non-pos i ti ve Entry wi l l Defa ul t to 1
+Data Value OR Probability 0.95 Wi l l Defa ul t to Da ta Va l ue i f Both Entered
+Optional Additional Note: Any entered Proba bi l i ti es MUST be between 0 a nd 1, EXCLUSIVE
+Data Value OR Probability Wi l l Defa ul t to Da ta Va l ue i f Both Entered
+Output Results
+Area Data Value Probability
+Below 42.29 0.9500
+Above 42.29 0.0500
+Between 42.29 & 42.29 0.0000
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+32
+32.392
+32.784
+33.176
+33.568
+33.96
+34.352
+34.744
+35.136
+35.528
+35.92
+36.312
+36.704
+37.096
+37.488
+37.88
+38.272
+38.664
+39.056
+39.448
+39.84
+40.232
+40.624
+41.016
+41.408
+41.8
+42.192
+42.584
+42.976
+43.368
+43.76
+44.152
+44.544
+44.936
+45.328
+45.72
+Normal Distribution
+0.9500000 0.0500000
+Excel command: norm.inv(0.95,39,2)
+R Command: qnorm(0.95,39,2)
+Point Estimates
+Population
+Sample
+Suppose we are interested in Knowing the Mean
+of a Specific Quality Characteristic Being Produced
+by a Manufacturing Process
+Population: All parts being produced
+Sample: A few parts selected for
+Measurement of the Specific
+Quality Characteristic (eg, Size)
+Parameter: Population Mean, µ
+Mean Size being produced by
+entire process
+Statistic: Sample Mean,
+Sample Average Size
+¯
+𝑋
+Sample Average Size, , is Point Estimate of
+Production Process Mean Size, µ.
+¯
+𝑋
+A sample statistic is used to estimate a population parameter. Recall, what we
+generally want to know is a population parameter, but all we have available
+is a subset of the population – a sample, from which we can generate sample
+statistics.
+is also a random variable,
+and the model for each Xi of the
+Sample will extend to .
+¯
+𝑋
+¯
+𝑋
+Central Limit Theorem
+Most Powerful Theorem in Statistics
+If repeated samples of size n are obtained from any population,
+The sampling distribution of the sample means will
+1. Have the same mean value as the original population
+2. Have a smaller standard deviation than the original population by a factor 1/
+3. Have a distribution that tends to be normal, more so as n increases in size
+𝑛
+Sampling Distribution of Sample Averages ( ) can be described as follows:
+1. µAvg = µ
+2. σAvg = σ/
+3. Tends towards a Normal Distribution in behavior
+¯
+𝑋
+𝑛
+NOTE: E[ ] = µAvg = µ, so unbiased estimator of µ¯
+𝑋¯
+𝑋
+NOTE: Standard Deviation of = σAvg is SMALLER than
+the Standard Deviation of Individual Results = σ by a
+factor of 1/
+¯
+𝑋
+𝑛
+NOTE: Distribution is EXACTLY Normal if distribution of Individual
+Results is Normal. Only need n ~10 for a “mounded” distribution, n > 30
+usually sufficient for most other distributions
+Central Limit Theorem
+Example
+A common practice in manufacturing is to sample product as produced by the manufacturing
+process. Often several parts/packages/units are sampled at a given time and evaluated.
+Imagine you work for a company that produces touch screen panels for smart phones, and at
+the end of each shift 5 screens are sampled from the end of the line and measured for flatness.
+The specifications for flatness results is 0 ± 1 micron and currently, the process appears to
+be running near its target of 0 with a standard deviation of 0.35 microns. In addition, the
+flatness results can be reasonably described using a normal distribution.
+1) What is the probability that an
+individual screen will be out-of-spec?
+Let F = Flatness Measurement on a single screen
+F ~ N(0, 0.35)
+Looking for 1 - Pr[ -1 < F < 1 ] =
+1 - Pr[ (-1 – 0)/0.35 < Z < (1 – 0)/0.35 ] =
+1 - Pr[ -2.857 < Z < 2.857] = 0.0043
+-1.2 -1 -0.8 -0.6 -0.4 -0.2 0 0.2 0.4 0.6 0.8 1 1.2
+Flatness (microns)
+Touch Screen Flatness Process
+Process
+2) What is the probability that a sample
+average of 5 screens will be out-of-spec?-1.2 -1 -0.8 -0.6 -0.4 -0.2 0 0.2 0.4 0.6 0.8 1 1.2
+Flatness (microns)
+Touch Screen Flatness Process
+Process Sample Averages
+Let = Average Flatness of 5 screens
+~ N(0, 0.35/( )) = N(0, 0.1565)
+Looking for 1 - Pr[ -1 < < 1 ] =
+1 - Pr[ (-1 – 0)/0.1565 < Z < (1 – 0)/0.1565 ] =
+1 - Pr[ -6.389 < Z < 6.389] = 0.000000000167
+¯
+𝐹
+¯
+𝐹 𝟓
+¯
+𝐹
+So what do you think of the practice of releasing
+screens for shipment if the sample average is
+within specifications?
+Point Estimates
+A sample proportion, p, is also a sample statistic used to estimate a population parameter.
+The statistical model involved is not quite the same as the simple mean + error model, but it
+is still relatively simple: Xi = 1 with probability π and Xi = 0 with probability (1-π). The
+parameter π represents the probability of the outcome of interest. [Bernoulli Trials]
+Population
+Sample
+Suppose we are interested in Knowing the
+True Proportion of Orange Reese’s Pieces
+Being Produced by Hershey
+Population: All Reese’s Pieces Being
+Produced by Hershey
+Sample: A group of Reese’s Pieces
+selected at random from a Bag of
+Reese’s Pieces (eg, samples of 25)
+Parameter: Population Proportion, π, of
+Orange RPs being produced by Hershey
+Statistic: Sample Proportion, p
+Number of Orange in Sample (X) /
+Sample Size (n), so p = X/n
+Sample Proportion, p = X/n, is Point Estimate of
+Hershey’s Process Proportion, π.
+Sample Proportion
+A sample proportion is really a sample average in disguise
+If we imagine each sample point as a Bernoulli trial, and
+Let the random variable
+Xi = 1 if that trial is a “success”
+0 if that trial is a “failure” {
+Then the average of the Xis = = [Sumi=1 to n(Xi)]/n = p,
+Since [Sumi=1 to n(Xi)] is a count of the number of “successes” in the sample
+¯
+𝑋
+Recall the sample proportion p is a Point Estimate of the corresponding
+population parameter π, and since p is really an average statistic, by the
+Central Limit Theorem, the sampling distribution for p has
+Mean = π,
+Standard Deviation = Std Dev(Xi)/( ) = , and
+Will tend to be Normally Distributed as n increases
+n π(1-π)/n
+How large does n need to be for distribution to reasonably approximate a normal?
+n > 9*max[(1-π)/π, π/(1-π)]
+(ie, if π=0.5, then n>9)
+Sample Proportion
+Example: Suppose we want to estimate the proportion of Orange Reese’s
+Pieces produced by Hershey, call this population parameter: π
+If we imagine each Reese’s Piece (ie, sample point) as a Bernoulli trial, and
+Let the random variable
+Xi = 1 if that piece is Orange (ie, trial is a “success”)
+0 if that piece is not Orange (ie, trial is a “failure”)
+{
+Then the [Sumi=1 to 25(Xi)] = Count of Orange Reese’s Pieces in the sample,
+Say this Count = 10, then p = 10/25 = 0.4 (ie, [Sumi=1 to 25(Xi)]/n)
+Now, suppose Hershey claims that the proportion of Orange Reese’s Pieces it routinely
+produces is 50% (ie, π = 0.5), then the sampling distribution for p should have
+Mean = π = 0.5,
+Standard Deviation = = = 0.1, and
+Will tend to be Normally Distributed as n increases (n=25>9, so reasonably normal)
+π(1-π)/n 0.5(1-0.5)/25
+The information we have is a sample of n = 25 Reese’s Pieces
+So … is the proportion p = 0.4 in our sample of 25 unusual?
+Can we use the information above to help answer this question?
+Sample Proportion
+Let’s use the information about the sampling distribution for p from the CLT:
+Mean = π = 0.5,
+Standard Deviation = = = 0.1, and
+Will tend to be Normally Distributed as n increases (n=25>9, so reasonably normal)
+To estimate the probability that we would observe a proportion p <= 0.4 in a sample of 25
+if, in fact, Hershey is making 50% of its Reese’s Pieces candies Orange:
+P[ p <= 0.4 | π = 0.5 ] = P [ (p – 0.5)/0.1 <= (0.4 – 0.5)/0.1 ]
+= P [ Z <= -1 ]
+≈ 0.1587
+π(1-π)/n 0.5(1-0.5)/25
+So … is the proportion p = 0.4 in our sample of 25 unusual? What do you think?
+What if our sample size was 100 and we only observed 40 Orange RPs (ie, p still 0.4)?
+The sample proportion is still the same (ie, p = 0.4), but we have more information
+n = 100 vs n = 25, and the sampling distribution for p becomes more narrow.
+The CLT tells us how much more narrow as Standard Deviation was 0.1 for n = 25,
+but now is = 0.05, for n = 100, and
+P[ p <= 0.4 | π = 0.5 ] = P [ (p – 0.5)/0.05 <= (0.4 – 0.5)/0.05 ]
+= P [ Z <= -2 ]
+≈ 0.0228
+0.5(1-0.5)/100
+So … now what do you think?
+Elements of a Test of Hypothesis
+Suppose we work for a pharmaceutical company, and have a new drug
+for the treatment heart murmurs.
+The competition has an already established drug for this on the market
+that is known to work successfully with 65% of patients to which it is
+administered.
+We want to know if the success rate for our new drug is higher than the
+65% success rate for the currently available competitive offering.
+The hypothesis we would like to validate is that the success rate for
+our drug (call this π) is greater than 65% (ie, 0.65).
+This is the RESEARCH HYPOTHESIS
+(also often called the ALTERNATIVE HYPOTHESIS)
+It can be expressed in abbreviated form as: H1: π > 0.65
+The RESEARCH HYPTOHESIS is the one we would like to validate.
+Elements of a Test of Hypothesis
+In order to establish the validity of the RESEARCH HYPOTHESIS,
+we need take an indirect approach and assume the opposite is true.
+We assume that the success rate of the new drug, π, is 65% (or less).
+This is the NULL HYPOTHESIS
+(also often called the NULL MODEL)
+It can be expressed in abbreviated form as: H0: π = 0.65
+(NOTE: Being less than 65% is implied from the form of the RESEARCH HYPOTHESIS)
+The NULL HYPTOHESIS is the OPPOSITE of the one we would like to validate.
+The actual test is focused on evaluating if the NULL HYPOTHESIS is valid, or
+reasonable, hoping for sufficient evidence in the test to contradict this,
+and then conclude that the RESEARCH HYPOTHESIS must be valid instead.
+Elements of a Test of Hypothesis
+So now we have two Hypotheses:
+H0: π = 0.65
+(NULL HYPOTHESIS)
+H1: π > 0.65
+(RESEARCH HYPOTHESIS)
+We obtain test information (ie, data from a sample of some nature).
+In the drug example, this would ideally be treatment results of patients
+administered the new drug.
+We then evaluate the test (ie, sample) information in hopes that it will provide
+“sufficient evidence” to contradict (ie, REJECT) the NULL HYPOTHESIS and
+conclude the RESEARCH HYPOTHESIS is indeed true.
+However, this sample data might not provide such evidence, and we will be
+left to conclude that the NULL HYPOTHESIS could still be viable (ie, FAIL TO
+REJECT) and fail to determine that the RESEARCH HYPOTHESIS is true.
+Elements of a Test of Hypothesis
+H0: π = 0.65
+(NULL
+HYPOTHESIS)
+OR
+REJECT FAIL TO REJECT
+FAIL TO ACCEPT
+ACCEPT
+H1: π > 0.65
+(RESEARCH
+HYPOTHESIS)
+ACCEPT
+REJECT
+So … NEVER ACCEPT the NULL HYPOTHESIS, Only REJECT or FAIL TO REJECT
+and NEVER REJECT the RESEARCH HYPOTHESIS, Only ACCEPT or FAIL TO ACCEPT
+Elements of a Test of Hypothesis
+Once a NULL MODEL has been established, then we need a way to use
+the sample data to evaluate (ie, test) it.
+This is the role of the TEST STATISTIC, which is generally a function of the
+sample statistic corresponding to the population parameter of interest.
+The TEST STATISTIC has a sampling distribution that can be specified under
+the NULL MODEL, this is called the NULL DISTRIBUTION.
+For the drug example, the TEST STATISTIC will be the sample proportion
+p = number of patients tested where drug is success (nS) / total number tested (n)
+Under the NULL HYPOTHESIS (H0: π=0.65), the sampling distribution of p is
+p ~ Bin(π, n), which for n > 9*.65/.35 = 16.7 can be approximated by
+p ~ N(µ = π, σ = ) = N(µ=0.65, σ≈0.477/ )
+π*(1-π )/n n
+Suppose n = 50, then p ~ N(µ=0.65, σ≈0.067)
+The NULL DISTRBUTION is the sampling distribution of the TEST STATISTIC
+under the NULL MODEL (ie, assuming the NULL HYPOTHESIS is true).
+Elements of a Test of Hypothesis
+Once we have a TEST STATISTIC and its NULL DISTRIBUTION, then
+we need a DECISION RULE to determine the validity of the NULL MODEL.
+In any decision, we run a risk of making an incorrect choice.
+It is no different in testing hypotheses.
+NULL MODEL is Actually …
+Based on Sample TEST STATISTIC … True False
+REJECT NULL MODEL
+FAIL TO REJECT NULL MODEL
+Type I Error
+P[Type I Error] = α
+α = Significance Level
+Determines Critical Region
+for the TEST STATISTIC
+Type II Error
+P[Type II Error] = β
+1- β = Power
+Function of Δ Between
+NULL MODEL & Actual
+Correct
+Correct
+The DECISION RULE is established by choosing a Significance Level = α
+(ie, P[Type I Error] = risk of incorrectly rejecting the NULL HYPOTHESIS)
+Elements of a Test of Hypothesis
+For our drug example, if we set the significance level α = 0.05, then
+given the NULL DISTRIBUTION of our TEST STATISTIC, we would
+define our DECISION RULE as any p > p0 where
+P[ p > p0 | π = 0.65, n = 50] = 0.05 (ie, α)
+0
+1
+2
+3
+4
+5
+6
+7
+0 0.2 0.4 0.6 0.8 1
+Sampling Distribution of p
+Given π = 0.65, n = 50
+Since the NULL DISTRIBUTION
+of p is its Sampling Distribution
+Given π = 0.65 & n = 50 is
+p ~ N(µ = 0.65, σ ≈ 0.067),
+p0 = 0.761 (ie, 1.645*0.067)
+0
+1
+2
+3
+4
+5
+6
+7
+0 0.2 0.4 0.6 0.8 1
+Sampling Distribution of p
+Given π = 0.65, n = 50
+So … DECISION RULE is
+REJECT H0: π=0.65 if p > 0.761
+p0=0.761
+α=0.05
+Elements of a Test of Hypothesis
+The final elements are a DECISION and a CONCLUSION.
+Observed
+Successful
+Results
+TEST
+STATISTIC
+DECISION CONCLUSION
+nS = 40 p = 0.80 REJECT H0 at
+Significance
+Level = 0.05
+New Drug has success
+rate higher than
+competitor
+nS = 35 p = 0.70 FAIL TO
+REJECT H0 at
+Significance
+Level = 0.05
+Insufficient Evidence to
+conclude success rate
+for New Drug is higher
+than competitor
+0
+1
+2
+3
+4
+5
+6
+7
+0 0.2 0.4 0.6 0.8 1
+Sampling Distribution of p
+Given π = 0.65, n = 50
+Not Large
+Enough to
+Fall in
+Critical/REJECT
+Region
+Large Enough
+to Fall in
+Critical/REJECT
+Region
+Elements of a Test of Hypothesis
+Observed Significance Level = p-Value
+0
+1
+2
+3
+4
+5
+6
+7
+0 0.2 0.4 0.6 0.8 1
+Sampling Distribution of p
+Given π = 0.65, n = 50 If we observe p = 0.8, then
+P[p > 0.8 | π = 0.65, n = 50] ≈ 0.0131
+is the observed significance level, and
+is known as the p-Value for this test.
+A p-Value < Significance Level = α
+indicates that H0 will be REJECTed.
+p-Value =
+0.0131
+0
+1
+2
+3
+4
+5
+6
+7
+0 0.2 0.4 0.6 0.8 1
+Sampling Distribution of p
+Given π = 0.65, n = 50
+If we observe p = 0.7, then
+P[p > 0.7 | π = 0.65, n = 50] ≈ 0.2293
+is the observed significance level, and
+is known as the p-Value for this test.
+A p-Value > Significance Level = α
+indicates that we will FAIL TO REJECT H0
+p-Value =
+0.2293
+Types of Research Hypotheses
+For Significance Level α = 0.10
+6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6
+Standard Deviations
+Normal Distribution
+Right Tail Research Hypothesis: H1: π > π0
+Rejection Region all in Right Tail
+α=0.10
+Left Tail Research Hypothesis: H1: π < π0
+Rejection Region all in Left Tail
+-6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6
+Standard Deviations
+Normal Distribution
+α=0.10
+Two-Tail Research Hypothesis: H1: π ≠ π0
+Rejection Region Split into Both Tails Normal Distribution
+α=0.05 α=0.05
+0
+1
+2
+3
+4
+5
+6
+7
+Small α, Large β
+µ0 µ1
+α
+β
+0
+1
+2
+3
+4
+5
+6
+7
+Large α, Small β
+µ0 µ1
+α
+β
+Type I and Type II Errors
+As we seek smaller Type I Error rates,
+We necessarily increase Type II Error rates
+(and vice versa).
+So … we need to assess the relative
+consequences of making each type
+of error, and choose the Significance
+Level for the test accordingly.
+Drug Example:
+Type I Error – Determining Better
+when Really Not Better
+Type II Error – Failing to Recognize
+Better when Really is Better
+Can reduce risk of Type II Error by
+Increasing Risk of Type I Error
+A rule-of-thumb approach:
+Type II Error more Severe
+- Set α from 0.05 to 0.10
+Type I Error more Severe
+- Set α from 0 to 0.05
+~Same Consequences
+- Use α ≈ 0.05
+Confidence Intervals
+In introducing hypothesis testing, the question of interest was whether or not
+a newly developed drug for heart murmurs performed better than the competitor’s
+currently available offering.
+Recall that there were 50 patients tested with the new drug, and if 40 responded
+positively, then we would have a sample proportion p = 0.8.
+This was greater than the critical value of 0.76, so we Rejected H0 (our new drug no
+better than the competitor’s 65% success rate) and concluded that our drug is better
+than the competitor’s drug.
+There is still an unanswered question here. The test suggests it is better, but how
+much better is it?
+Is the answer simply 15% better? Do we simply take the observed sample
+proportion 0.80 and subtract the 0.65 success rate of the competitive offering?
+This is certainly a reasonable response, as the sample statistic here does provide
+our best point estimate of the population parameter we want to advertise, but
+there is a problem
+P[πNew = p = 0.8] = 0
+Interval Estimates
+However, perhaps we can find an Interval that has a positive probability of
+including the Population Parameter we want to know.
+eg, P[ Sample Average – Δ(ξ) < Population Mean < Sample Average + Δ(ξ)] = ξ
+where Δ(ξ) > 0 and 0 < ξ < 1
+Well … we know that
+P[ z(α/2) < Z < z(1-α/2)] = 1-α
+and that
+Z = (Sample Average – Population Mean) / Standard Error
+P[ z(α/2) < (Sample Average – Population Mean) / Standard Error < z(1-α/2)] = 1 – α
+P[ z(α/2) * Standard Error < Sample Average – Population Mean < z(1-α/2) * Standard Error] = 1 – α
+P[z(α/2)*Std Error – Sample Average < - Population Mean < z(1-α/2)*Std Error – Sample Average] = 1 – α
+P[Sample Average – z(1-α/2)*Std Error < Population Mean < Sample Average – z(α/2)*Std Error] = 1 - α
+Population Mean between
+Sample Average ± z(1-α/2)*Standard Error
+with Probability 1-α
+Recall: A proportion is just a
+mean (average) in disguise
+Note: Standard Error is
+σ/ , for a proportion
+this is
+n
+π(1-π)/n
+-6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6
+Standard Deviations
+Normal Distribution
+z(1-α/2)
+z(α/2)
+α/2
+α/2
+1 - α
+Confidence Intervals
+Basic format of Confidence Intervals:
+Best Point Estimate ± M(Confidence) * Standard Deviation of Point Estimate
+where M(Confidence) is a Multiplier based on the Desired Level of
+Confidence that the Interval Contains the True Value of the respective
+Population Parameter of interest
+For example, a 95% Confidence Interval for the success rate of the
+new drug, πNew, is given by
+p +/- z(0.975) * p(1-p)/n
+-6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6
+Standard Deviations
+Normal Distribution
+z(0.025) = -z(0.975)
+= -1.96
+z(0.975) = 1.96
+95%
+Between
+With p = 0.80, we can say
+with 95% Confidence that
+πNew is in the interval
+defined by
+0.8 +/- 1.96*
+or (0.689 to 0.911)
+0.8*0.2/50
+So, with 95% Confidence,
+the success rate for the new
+Drug is between ~69% and ~91%
+Confidence Intervals
+Concept: 95 of 100 95% Confidence Intervals will
+contain the True Population Parameter
+-1
+-0.8
+-0.6
+-0.4
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+1
+0 5 10 15 20
+Sample Mean
+19 of 20 (95%)
+95% Confidence
+Intervals
+include True
+Population
+Mean = 0
+0.98
+0.91
+0.83
+0.75
+0.67
+0.59
+0.51
+Population
+Proportion
+πNew = 0.75
+p
+Suppose that success rate for new drug, πNew = 0.75, then
+if we had 20 samples, and constructed 20 95% Confidence
+Intervals, we would expect 19 of the 20 to include 0.75.
+Confidence Intervals = Hypothesis Tests
+A Test of H0: π = π0 (or µ = µ0) at a Significance Level of α
+Is Equivalent to
+A 1-α% Confidence Interval
+If the Interval Does Not Contains π0 (or µ0), then Reject H0
+Otherwise, Conclude Insufficient Evidence to Reject H0
+In the example, π0 = 0.65 is below the 95% Confidence Interval (0.689 to 0.911);
+Hence, we would Reject H0: π = 0.65 and Conclude that H1: π > 0.65 is True,
+at the 0.05 Level of Significance.
+5 6 7 8 9 10 11 12 13 14 15
+Thickness (mils)
+Plating Process
+Process Sample Averages
+Inference on µ
+σ Known
+Suppose we have responsibility for managing the gold plating step in the production of
+specific electronic connector.
+The process is routinely sampled with 5 connectors being evaluated for plating thickness.
+It is important to keep the plating process on target since too little gold compromises
+functionality and too much gold significantly increases manufacturing costs.
+The process target is 10 mils and the process has a known standard deviation, σ = 1.5 mil.
+At each sampling opportunity, we need to decide if process is on-target or not.
+Thickness results are normally distributed.
+Research Hypothesis: H1: µ ≠ 10
+Null Hypothesis: H0: µ = 10
+Test Statistic: (Sample Avg)
+Null Distribution: N(10, 1.5/ )
+N(10, 0.67)
+Decision Rule: Reject H0 if
+< 8.69 or
+> 11.31
+Values = 10 +/- 1.96 * 0.67
+w/ P[Z > 1.96] = 0.025 (so α=0.05)
+¯
+𝑋
+5
+¯
+𝑋
+¯
+𝑋
+Confidence Intervals for µ
+σ Known
+Recall the gold plating process example, where with each sample we essentially
+perform a test of the Null Hypothesis (H0: µ = 10) (ie, a test of whether or not the
+process is on target).
+7
+8
+9
+10
+11
+12
+13
+1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33
+THK
+Sample
+Plating Process
+THK Avg
+UCL
+Target
+LCL
+At Sample 34, = 8.38
+We Reject H0 and Conclude
+Process Off Target Low, and
+Take Action to Get Process
+Back On Target
+¯
+𝑋
+For Samples 1-33,
+8.69 < < 11.31, so
+Conclude Not Enough
+Evidence to Reject H0, and
+Let Process Run with
+No Other Action
+¯
+𝑋
+At Sample 34, a 95% Confidence Interval for the Current Process Mean would be
+8.38 +/- 1.96*0.67 = (7.09 to 9.69)
+Note that the interval does not include the Target = 10, Confidence Intervals for
+the previous 33 Samples will include Target = 10.
+Point Estimate
+= ¯
+𝑋
+Multiplier = z(0.975)
+Standard Error = σ/ = 1.5/
+n 5
+Inference on µ
+σ Known
+With each sample we essentially perform a test of the Null Hypothesis (H0: µ = 10)
+(ie, a test of whether or not the process is on target).
+7
+8
+9
+10
+11
+12
+13
+1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33
+THK
+Sample
+Plating Process
+THK Avg
+UCL
+Target
+LCL
+At Sample 34, = 8.38
+We Reject H0 and Conclude
+Process Off Target Low, and
+Take Action to Get Process
+Back On Target
+¯
+𝑋
+For Samples 1-33,
+8.69 < < 11.31, so
+Conclude Not Enough
+Evidence to Reject H0, and
+Let Process Run with
+No Other Action
+¯
+𝑋
+Is there a potential problem with managing the process this way?
+How Often Can we Expect False Signals (ie, Type I Errors)?
+What if the sampling frequency is 2X per day?
+Similarly, we would expect 1 in 20 confidence intervals to not include µ = 10.
+For this reason most organizations set limits at ±3σ/ (α = 0.003)
+n
+α = 0.05, so 1 in 20
+Expect a False Signal once every 10 days
+Student’s t Distribution
+By the CLT, we know
+Z = ( – µ)/[σ/ ]
+has a Standard Normal Distribution
+For many years it was thought that
+since σ is rarely, if ever, known that
+simply replacing σ with an estimate
+from the sample (ie, S) still left
+T = ( – µ)/[S/ ]
+with a Standard Normal Sampling
+Distribution. However, …
+¯
+𝑋 n
+¯
+𝑋 n
+About 100 years ago William Gosset
+working at Guiness discovered that for
+Smaller sample sizes, the sampling
+distribution of T had heavier tails than
+would be expected for a Standard
+Normal distribution. He published this
+work as “Student”; hence, for T we have
+-6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6
+Standard Deviations
+Student's-t Distribution
+n=2 n=5 Std Normal
+Student’s t Distribution
+So … if X1, X2, …, Xn is a random sample of size n drawn from a normal pdf
+with mean µ and variance σ2, ie, each Xi ~ N(µ, σ), then the sampling
+distribution of
+T = ( – µ)/[S/ ]
+follows a Student’s t Distribution with n-1 degrees of freedom.
+¯
+𝑋 n
+While the Standard Normal is only one distribution, Student’s t is actually
+a family of distributions, and the members are identified by their degrees of
+freedom – for most problems we will have this will be the sample size minus
+one (ie, n-1).
+As the degrees of freedom increase (as the sample size increases), the
+Student’s t Distribution becomes increasingly close to a Standard Normal
+Distribution. For n ~100 or more, the distributions are virtually identical.
+Student’s t Distribution
+Example: Suppose a random sample of size 10 is obtained from a normal pdf,
+and T = ( – µ)/[S/ ] is calculated, what is
+P[ T < 3]?
+Could use a t table, and find the value 3 on the row n-1 =9
+Not likely to be in the table, but could interpolate between
+2.821 & 3.250, and find 3 is 41.69% of the distance between
+these two values, the estimate P[T > 3] by taking the value
+41.69% of the way between 0.010 and 0.005 to get 0.0079,
+so P[T < 3] ≈ 1 – 0.0079 = 0.9921
+OR
+Could use Excel command: = 1 – TDIST(3, 9, 1) = 0.9925
+OR ….
+¯
+𝑋 n
+Value
+Degrees of Freedom
+(ie, n – 1 = 10 – 1 = 9)
+Tails
+R command: pt(3, 9)
+Student’s t Distribution
+Could use Excel utility:
+Input Information
+Degrees of Freedom 9
+Low T Score 3 OR Probability Wi l l Defa ul t to Da ta Va l ue i f Both Entered
+Note: Any entered Proba bi l i ti es MUST be between 0 a nd 1, EXCLUSIVE
+Upper T Score OR Probability Wi l l Defa ul t to Da ta Va l ue i f Both Entered
+Output Results
+Area Data Value Probability
+Below 3 0.9925
+Above 3 0.0075
+Between 3 & 3 0.0000
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+0.4
+0.45
+-4.5
+-4.248
+-3.996
+-3.744
+-3.492
+-3.24
+-2.988
+-2.736
+-2.484
+-2.232
+-1.98
+-1.728
+-1.476
+-1.224
+-0.972
+-0.72
+-0.468
+-0.216
+0.036
+0.288
+0.54
+0.792
+1.044
+1.296
+1.548
+1.8
+2.052
+2.304
+2.556
+2.808
+3.06
+3.312
+3.564
+3.816
+4.068
+4.32
+Student T
+Distribution
+0.9925218 0.0074782
+Student’s t Distribution
+Example: Find the value t0 such that P[ -t0 < T < t0 ] = 0.95 (again, for T with 9 df)
+Could use a t table and find entry in row n – 1 = 9, and column 0.025 = 2.262
+OR
+Could use Excel command: TINV(0.05,9) or R command: qt(0.975, 9)
+OR
+Could use Excel utility:
+Input Information
+Degrees of Freedom 9
+Low T Score OR Probability 0.025 Wi l l Defa ul t to Da ta Va l ue i f Both Entered
+Note: Any entered Proba bi l i ti es MUST be between 0 a nd 1, EXCLUSIVE
+Upper T Score OR Probability 0.975 Wi l l Defa ul t to Da ta Va l ue i f Both Entered
+Output Results
+Area Data Value Probability
+Below -2.262 0.0250
+Above 2.262 0.0250
+Between -2.262 & 2.262 0.9500
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+0.4
+0.45
+-4.5
+-4.248
+-3.996
+-3.744
+-3.492
+-3.24
+-2.988
+-2.736
+-2.484
+-2.232
+-1.98
+-1.728
+-1.476
+-1.224
+-0.972
+-0.72
+-0.468
+-0.216
+0.036
+0.288
+0.54
+0.792
+1.044
+1.296
+1.548
+1.8
+2.052
+2.304
+2.556
+2.808
+3.06
+3.312
+3.564
+3.816
+4.068
+4.32
+Student T
+Distribution
+0.0250000 0.0250000
+Inference on µ
+σ Unknown
+In many inference situations, the population standard deviation, σ, is not known.
+Consequently, it is necessary to estimate it using the sample data.
+Generally, it is estimated with the sample standard deviation, S.
+Example: In order to test a new teaching methodology, a school district
+randomly selects 10 classes in the district to experience the new approach.
+A standardized AP test for the subject is given as the final exam to these classes.
+The national average score on this test is 500, and scores are normally distributed.
+Data we have is the average AP test result for each of the 10 classes.
+Question: Will the mean AP scores for students receiving instruction by
+the new method be above the national average?
+Research Hypothesis: H1: µ > 500
+Null Hypothesis: H0: µ = 500
+Test Statistic: T = ( – 500)/[S/ ]
+Null Distribution: T ~ t(9)
+Decision Rule: Reject H0 if T > 1.833 (α=0.05)
+¯
+𝑋 10
+-5 -4 -3 -2 -1 0 1 2 3 4 5 6
+Standard Deviations
+Student's-t Distribution
+With = 518 and S = 22.2,
+T = 2.56 > 1.833, so Reject H0 and Conclude
+Average AP test scores higher with new method.
+¯
+𝑋
+Confidence Intervals for µ
+σ Unknown
+Example: In order to test a new teaching methodology, a school district
+randomly selects 10 classes in the district to experience the new approach.
+A standardized AP test for the subject is given as the final exam to these classes.
+The national average score on this test is 500, and scores are normally distributed.
+Data we have is the average AP test result for each of the 10 classes.
+Question: Will the mean AP scores for students receiving instruction by
+the new method be above the national average?
+Research Hypothesis: H1: µ > 500
+Null Hypothesis: H0: µ = 500
+Test Statistic: T = ( – 500)/[S/ ]
+Null Distribution: T ~ t(9)
+Decision Rule: Reject H0 if T > 1.833 (α=0.05)
+¯
+𝑋 10
+-5 -4 -3 -2 -1 0 1 2 3 4 5 6
+Standard Deviations
+Student's-t Distribution
+With = 518 and S = 22.2,
+T = 2.56 > 1.833, so Reject H0 and Conclude
+Average AP test scores higher with new method.
+¯
+𝑋
+A 95% Confidence Interval for µNew is given by
+518 +/- 2.262*7.02 or (502 to 534)
+Point Estimate
+= ¯
+𝑋
+Multiplier = t(9, 0.975)
+Estimated Standard Error = S/ = 22.2/
+n 10
+NOTE: Does not include 500
+Inference on σ
+Note that σ is also a population parameter, is usually unknown, and also often needs to be
+estimated from available sample data. The estimator we have been using is the sample
+standard deviation, S. Like , S is a sample statistic and also has a sampling distribution.¯
+𝑋
+While the CLT helps us with the sampling distribution of statistics, acquiring the sampling
+distribution of S is more involved. It can be shown that when the distribution of X is normal
+that
+(n-1)S2/σ2 ~ χ2(n-1),
+where χ2(n-1), is notation for a Chi-Square Distribution with n-1 degrees of freedom.
+¯
+𝑋
+Chi-square distributions do not, in general
+have the nice symmetrical bell-shape of a
+normal distribution (although as n-1 gets
+large, they do tend to take on this shape).
+However, this distribution can be utilized to
+conduct tests of hypotheses for σ, as well
+as construct confidence intervals for this
+population parameter.
+Chi-square probabilities can be found with the Excel
+command =CHIDIST(x, n-1) which returns P[>x], or
+the R command pchisq(x, n-1) = P[<x] and Chi Square
+percentiles can be found with the Excel command
+=CHIINV(p, n-1) which returns x | P[>x] = p, or the R
+command qchisq(p, n-1) returning x | P[<x] = p. In
+each case, n-1 is the related degrees of freedom.
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+0.12
+0 5 10 15 20 25 30
+fX(x)
+x
+Chi-Square Distribution
+df=10
+α = 0.05
+Inference on σ
+In Workshop 1, it was discovered that shift C appeared to have more variable gate width
+results than the other shifts. If expected gate width standard deviation for the routinely
+obtained results is 1.5nm, then assessing if the results obtained on shift C are more
+variable than this is a simple hypothesis test:
+Research Hypothesis: H1: σ > 1.5nm
+Null Hypothesis: H0: σ = 1.5nm
+Test Statistic: X2 = (n-1)S2/σ2
+Null Distribution: χ2(n-1)
+Decision Rule: With α = .05,
+Reject H0 if X2 > χ2(n-1, 1-α)
+Decision: n = 11, S = 4.14, so
+X2 = 95.23 > χ2(10, 0.95) = 18.31
+Conclusion: Variation observed on
+Shift C is far in excess of the
+expected amount (p-Value ≈ 5*10-16)
+OK, so variation on C Shift is greater than expected, but by how much?
+Inference on σ
+To address the “how much?” question, we again resort to a confidence interval.
+Since (n-1)S2/σ2 ~ χ2(n-1) when σ2 is the respective population variance:
+P[χ2(n-1,α/2) < (n-1)S2/σ2 < χ2(n-1,1-α/2)] = 1 – α
+P[1/χ2(n-1,1-α/2) < σ2/[(n-1)S2] < 1/χ2(n-1,α/2)] = 1 – α
+P[(n-1)S2/χ2(n-1,1-α/2) < σ2 < (n-1)S2/χ2(n-1,α/2)] = 1 – α
+P[S* < σ < S* ] = 1 – α
+Hence, a (1-α)% confidence interval for a population standard deviation is of the form:
+[Best Point Estimate * m(α/2)] to [Best Point Estimate * M(α/2)],
+where m(α/2) < 1 and M(α/2) > 1.
+(n-1)/χ2(n-1,1-α/2) (n−1)/χ2(n−1,α/2)
+For the C Shift data, to generate a 90% confidence interval for σC Shift, the limits would be:
+S * to S *
+4.14 * to 4.14 *
+3.26 to 7.03
+Note that this interval does not include the expected result of 1.5, and the range it covers is
+from just over 2X to just less than 5X this value. C Shift has much more variable results than
+would usually be expected, again consistent with the test of hypothesis, but more informative.
+(n-1)/χ2(n-1,0.95) (n−1)/χ2(n−1,0.05)
+10/18.31 10/3.94
