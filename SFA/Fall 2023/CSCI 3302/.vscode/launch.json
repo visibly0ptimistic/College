@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "ImageManipulator",
+            "request": "launch",
+            "mainClass": "ImageManipulator",
+            "projectName": "CSCI 3302_b5048b"
+        },
+        {
+            "type": "java",
+            "name": "LearningJava",
+            "request": "launch",
+            "mainClass": "LearningJava",
+            "projectName": "CSCI 3302_b5048b"
+        },
+        {
+            "type": "java",
+            "name": "MixedExample",
+            "request": "launch",
+            "mainClass": "MixedExample",
+            "projectName": "CSCI 3302_b5048b"
+        },
+        {
+            "type": "java",
+            "name": "OrderedIntegers",
+            "request": "launch",
+            "mainClass": "OrderedIntegers",
+            "projectName": "CSCI 3302_b5048b"
+        },
+        {
+            "type": "java",
+            "name": "Recursion2Examples",
+            "request": "launch",
+            "mainClass": "Recursion2Examples",
+            "projectName": "CSCI 3302_b5048b"
+        },
+        {
+            "type": "java",
+            "name": "RecursionExample",
+            "request": "launch",
+            "mainClass": "RecursionExample",
+            "projectName": "CSCI 3302_b5048b"
+        },
+        {
+            "type": "java",
+            "name": "consolidated_java_examples",
+            "request": "launch",
+            "mainClass": "consolidated_java_examples",
+            "projectName": "CSCI 3302_b5048b"
+        }
+    ]
+}
