@@ -1,0 +1,14 @@
+Creating loan:  3.6 APR, for 30 years, with a loan amount of $100000.0
+
+java.lang.IllegalArgumentException: Annual interest rate must be positive.
+Creating loan:  -1.0 APR, for 5 years, with a loan amount of $25000.0
+java.lang.IllegalArgumentException: Annual interest rate must be positive.
+
+java.lang.IllegalArgumentException: Number of years must be positive.
+Creating loan:  3.88 APR, for -3 years, with a loan amount of $250000.0
+java.lang.IllegalArgumentException: Number of years must be positive.
+
+java.lang.IllegalArgumentException: Loan amount must be positive.
+Creating loan:  8.91 APR, for 7 years, with a loan amount of $-20000.0
+java.lang.IllegalArgumentException: Loan amount must be positive.
+
