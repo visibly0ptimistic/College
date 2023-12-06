@@ -1,0 +1,40 @@
+fig, axs = plt.subplots(4, 2)
+fig.set_size_inches (20, 20)
+
+image_path = os.path.join(data_dir, 'Fig3_3a.jpg')
+in_im = io.imread(image_path)
+
+axs[0,0].imshow(in_im)
+axs[0,0].set_title ('Input image')
+draw_color_histogram (in_im, axs[0,1])
+axs[0,1].set_title ('Histogram of RGB channels')
+
+#--------- Convert RGB to Lab space (Complete next line) ---------------------
+in_im_Lab = change.rgb2lab(in_im)
+#-----------------------------------------------------------------------------
+axs[1,0].imshow(in_im_Lab[:,:,0], 'gray')
+axs[1,0].set_title ('L-channel')
+draw_color_histogram (in_im_Lab, axs[1,1])
+axs[1,1].set_title ('Histogram of Lab (L-red, a-blue, b-green)')
+
+
+from skimage import exposure
+#----------- Equalize histogram using skimage function (Complete next line)----
+in_im_Lab[:,:,0] = 100*exposure.equalize_hist(in_im_Lab[:,:,0]/100)
+#-----------------------------------------------------------------------------
+# The multiply by 100 is to remap the value from (0,1) range to (0, 100) range.
+# equalize_hist returns values betwen 0 and 1
+
+axs[2,0].imshow(in_im_Lab[:,:,0], 'gray')
+draw_color_histogram (in_im_Lab, axs[2,1])
+
+
+#-----------Convert back to RGB format (Complete next line)-------------------
+out_im = change.lab2rgb(in_im_Lab)
+#-----------------------------------------------------------------------------
+axs[3,0].imshow(out_im)
+axs[3,0].set_title ('Histogram equalized input image using skimage package')
+
+draw_color_histogram (out_im, axs[3,1])
+axs[3,1].set_title ('Distribution of colors of skimage histogram equalized image');
+
